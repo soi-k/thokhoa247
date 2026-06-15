@@ -7,9 +7,11 @@ gallery), trang chi tiết sản phẩm và trang bài viết có mục lục + 
 
 ## Cài đặt
 
-1. Copy thư mục `wp-content/themes/thokhoa247` vào `wp-content/themes/` của
-   site WordPress.
-2. Vào **Giao diện > Theme**, kích hoạt theme **Thợ Khóa 247**.
+1. Tải toàn bộ repo dưới dạng file ZIP (Code > Download ZIP).
+2. Vào **Giao diện > Theme > Thêm mới > Tải theme lên**, chọn file ZIP vừa
+   tải và cài đặt (hoặc giải nén và copy cả thư mục vào
+   `wp-content/themes/thokhoa247/` qua FTP).
+3. Vào **Giao diện > Theme**, kích hoạt theme **Thợ Khóa 247**.
 3. (Khuyến nghị) Cài plugin **Advanced Custom Fields** (free) để có thể chỉnh
    sửa: hero, ảnh giới thiệu, gallery cửa hàng/dự án, giá & thông số kỹ thuật
    sản phẩm, đánh giá khách hàng — theme vẫn chạy bình thường nếu chưa cài,
@@ -43,7 +45,7 @@ cho từng mục.
 ## Cấu trúc theme
 
 ```
-wp-content/themes/thokhoa247/
+thokhoa247/ (= wp-content/themes/thokhoa247 sau khi cài)
 ├── style.css              # Theme header + import
 ├── functions.php          # Setup, CPT, taxonomy, enqueue assets
 ├── header.php / footer.php
