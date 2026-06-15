@@ -70,6 +70,8 @@ while ( have_posts() ) :
 				</ul>
 			</section>
 		</article>
+
+		<?php get_template_part( 'template-parts/sidebar-shop' ); ?>
 	</main>
 	<?php
 endwhile;

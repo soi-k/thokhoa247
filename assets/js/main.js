@@ -26,6 +26,93 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		} );
 	} );
 
+	// Toggle ô tìm kiếm trên header
+	var searchToggle = document.querySelector( '[data-search-toggle]' );
+	var searchForm = document.querySelector( '[data-search-form]' );
+
+	if ( searchToggle && searchForm ) {
+		searchToggle.addEventListener( 'click', function () {
+			var isOpen = searchForm.classList.toggle( 'is-open' );
+			if ( isOpen ) {
+				var input = searchForm.querySelector( 'input[type="search"]' );
+				if ( input ) {
+					input.focus();
+				}
+			}
+		} );
+	}
+
+	// Hero slider
+	var heroSlider = document.querySelector( '[data-hero-slider]' );
+
+	if ( heroSlider ) {
+		var slides = heroSlider.querySelectorAll( '.hero-slide' );
+		var dots = heroSlider.querySelectorAll( '[data-hero-dot]' );
+		var prevBtn = heroSlider.querySelector( '[data-hero-prev]' );
+		var nextBtn = heroSlider.querySelector( '[data-hero-next]' );
+		var current = 0;
+		var timer = null;
+
+		var goToSlide = function ( index ) {
+			if ( index < 0 ) {
+				index = slides.length - 1;
+			} else if ( index >= slides.length ) {
+				index = 0;
+			}
+
+			slides.forEach( function ( slide, i ) {
+				slide.classList.toggle( 'is-active', i === index );
+			} );
+
+			dots.forEach( function ( dot, i ) {
+				dot.classList.toggle( 'is-active', i === index );
+			} );
+
+			current = index;
+		};
+
+		var startAutoplay = function () {
+			if ( slides.length > 1 ) {
+				timer = setInterval( function () {
+					goToSlide( current + 1 );
+				}, 6000 );
+			}
+		};
+
+		var stopAutoplay = function () {
+			if ( timer ) {
+				clearInterval( timer );
+				timer = null;
+			}
+		};
+
+		if ( prevBtn ) {
+			prevBtn.addEventListener( 'click', function () {
+				stopAutoplay();
+				goToSlide( current - 1 );
+				startAutoplay();
+			} );
+		}
+
+		if ( nextBtn ) {
+			nextBtn.addEventListener( 'click', function () {
+				stopAutoplay();
+				goToSlide( current + 1 );
+				startAutoplay();
+			} );
+		}
+
+		dots.forEach( function ( dot ) {
+			dot.addEventListener( 'click', function () {
+				stopAutoplay();
+				goToSlide( parseInt( dot.getAttribute( 'data-hero-dot' ), 10 ) );
+				startAutoplay();
+			} );
+		} );
+
+		startAutoplay();
+	}
+
 	// Tabs sản phẩm nổi bật (Bán chạy / Khóa đồng)
 	var tabButtons = document.querySelectorAll( '.products-tabs__btn' );
 	var tabPanels = document.querySelectorAll( '.products-tabs__panel' );

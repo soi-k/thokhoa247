@@ -1,6 +1,7 @@
 <?php
 /**
- * Danh sách sản phẩm
+ * Danh sách sản phẩm - nhóm theo thương hiệu (taxonomy "thuong-hieu").
+ * Sản phẩm chưa gán thương hiệu sẽ hiển thị ở nhóm "Sản phẩm khác".
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -8,51 +9,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+$all_posts = get_posts(
+	array(
+		'post_type'      => 'san-pham',
+		'posts_per_page' => -1,
+	)
+);
+
+$brands = get_terms(
+	array(
+		'taxonomy'   => 'thuong-hieu',
+		'hide_empty' => true,
+	)
+);
+
+$grouped  = array();
+$no_brand = array();
+
+if ( ! is_wp_error( $brands ) && ! empty( $brands ) ) {
+	foreach ( $all_posts as $product ) {
+		$terms = wp_get_post_terms( $product->ID, 'thuong-hieu' );
+		if ( empty( $terms ) || is_wp_error( $terms ) ) {
+			$no_brand[] = $product;
+			continue;
+		}
+		foreach ( $terms as $term ) {
+			$grouped[ $term->term_id ]['term']    = $term;
+			$grouped[ $term->term_id ]['posts'][] = $product;
+		}
+	}
+}
 ?>
 
 <main id="main-content" class="container archive-content">
 	<h1 class="section-title section-title--left"><?php esc_html_e( 'Sản phẩm', 'thokhoa247' ); ?></h1>
 
-	<?php if ( have_posts() ) : ?>
-		<div class="products-featured__grid">
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				$gia_sale = thokhoa247_get_field( 'gia_sale', get_the_ID(), 0 );
-				$gia_goc  = thokhoa247_get_field( 'gia_goc', get_the_ID(), 0 );
-				$percent  = ( $gia_goc && $gia_sale ) ? round( ( 1 - $gia_sale / $gia_goc ) * 100 ) : 0;
-				?>
-				<a class="product-card" href="<?php the_permalink(); ?>">
-					<?php if ( $percent > 0 ) : ?>
-						<span class="product-card__badge">-<?php echo esc_html( $percent ); ?>%</span>
-					<?php endif; ?>
-					<div class="product-card__image">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'medium' ); ?>
-						<?php else : ?>
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/placeholder.svg' ); ?>" alt="" loading="lazy">
-						<?php endif; ?>
-					</div>
-					<div class="product-card__body">
-						<h3><?php the_title(); ?></h3>
-						<?php if ( $gia_sale ) : ?>
-							<p class="product-card__price">
-								<span class="product-card__price-sale"><?php echo esc_html( number_format( (float) $gia_sale, 0, ',', '.' ) ); ?> đ</span>
-								<?php if ( $gia_goc ) : ?>
-									<span class="product-card__price-old"><?php echo esc_html( number_format( (float) $gia_goc, 0, ',', '.' ) ); ?> đ</span>
-								<?php endif; ?>
-							</p>
-						<?php endif; ?>
-					</div>
-				</a>
-				<?php
-			endwhile;
-			?>
-		</div>
+	<?php if ( ! empty( $grouped ) ) : ?>
+		<?php foreach ( $grouped as $group ) : ?>
+			<h2 class="section-title section-title--left products-brand-title"><?php echo esc_html( $group['term']->name ); ?></h2>
+			<?php thokhoa247_render_product_grid( $group['posts'] ); ?>
+		<?php endforeach; ?>
 
-		<div class="pagination">
-			<?php the_posts_pagination(); ?>
-		</div>
+		<?php if ( ! empty( $no_brand ) ) : ?>
+			<h2 class="section-title section-title--left products-brand-title"><?php esc_html_e( 'Sản phẩm khác', 'thokhoa247' ); ?></h2>
+			<?php thokhoa247_render_product_grid( $no_brand ); ?>
+		<?php endif; ?>
+	<?php elseif ( ! empty( $all_posts ) ) : ?>
+		<?php thokhoa247_render_product_grid( $all_posts ); ?>
 	<?php else : ?>
 		<p><?php esc_html_e( 'Chưa có sản phẩm nào.', 'thokhoa247' ); ?></p>
 	<?php endif; ?>

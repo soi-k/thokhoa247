@@ -18,6 +18,27 @@ function thokhoa247_default_contact() {
 		'hotline_mien_nam' => '0981.51.50.50',
 		'hotline_mien_bac' => '0919.188.881',
 		'working_hours' => '24/24',
+		'zalo'          => '0919188881',
+	);
+}
+
+/**
+ * Hero slider mặc định (dùng khi chưa nhập ACF repeater "hero_slides").
+ */
+function thokhoa247_default_hero_slides() {
+	return array(
+		array(
+			'title'    => 'DỊCH VỤ SỬA KHÓA TẠI NHÀ',
+			'subtitle' => 'Chuyên nghiệp - Nhanh, phục vụ 24/7 - Giá cạnh tranh - Phục vụ tận tâm, uy tín',
+			'image'    => get_template_directory_uri() . '/assets/images/hero-placeholder.svg',
+			'link'     => '#',
+		),
+		array(
+			'title'    => 'LÀM CHÌA KHÓA Ô TÔ',
+			'subtitle' => 'Phôi chìa chất lượng - Phục vụ tại nhà - Rẻ hơn giá hãng nhiều lần',
+			'image'    => get_template_directory_uri() . '/assets/images/hero-placeholder.svg',
+			'link'     => '#',
+		),
 	);
 }
 

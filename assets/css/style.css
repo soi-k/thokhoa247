@@ -179,15 +179,125 @@ a {
 	background: var(--color-primary-dark);
 }
 
-.main-nav__list .sub-menu {
-	display: none;
+.main-nav__list li.menu-item-has-children {
+	position: relative;
 }
 
-/* ---- Hero ---- */
+.main-nav__list .sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 50;
+	min-width: 220px;
+	background: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border-radius: 0 0 var(--radius) var(--radius);
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav__list .sub-menu li a {
+	color: var(--color-text);
+	text-transform: none;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.main-nav__list .sub-menu li a:hover {
+	background: var(--color-bg-light);
+	color: var(--color-primary);
+}
+
+@media (min-width: 641px) {
+	.main-nav__list li.menu-item-has-children:hover > .sub-menu {
+		display: block;
+	}
+}
+
+.main-nav__list li.menu-item-has-children.is-open > .sub-menu {
+	display: block;
+	position: static;
+	box-shadow: none;
+}
+
+/* ---- Menu actions: search & account ---- */
+.main-nav__inner {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+}
+
+.main-nav__list {
+	flex: 1;
+}
+
+.main-nav__actions {
+	display: flex;
+	gap: 4px;
+}
+
+.main-nav__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.main-nav__icon svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+.main-nav__search-form {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 60;
+	background: #fff;
+	padding: 8px;
+	border-radius: 0 0 var(--radius) var(--radius);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.main-nav__search-form.is-open {
+	display: block;
+}
+
+.main-nav__search-form input {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: 8px 12px;
+	width: 220px;
+}
+
+/* ---- Hero slider ---- */
 .hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-slider {
+	position: relative;
+}
+
+.hero-slide {
+	display: none;
 	background: linear-gradient(135deg, var(--color-secondary), #1d3f7a);
 	color: #fff;
 	padding: 48px 0;
+}
+
+.hero-slide.is-active {
+	display: block;
 }
 
 .hero__inner {
@@ -214,6 +324,53 @@ a {
 
 .hero__image {
 	flex: 1 1 320px;
+}
+
+.hero-slider__nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	border: none;
+	font-size: 28px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.hero-slider__nav--prev {
+	left: 16px;
+}
+
+.hero-slider__nav--next {
+	right: 16px;
+}
+
+.hero-slider__dots {
+	position: absolute;
+	bottom: 12px;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.hero-slider__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	padding: 0;
+}
+
+.hero-slider__dot.is-active {
+	background: #fff;
 }
 
 /* ---- CTA bar ---- */
@@ -691,6 +848,89 @@ a {
 /* ---- Article / single post ---- */
 .article-layout {
 	padding: 32px 16px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 32px;
+	align-items: start;
+}
+
+.article-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sidebar-box {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: 16px;
+}
+
+.sidebar-box h3 {
+	margin-top: 0;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: var(--color-secondary);
+}
+
+.sidebar-box ul {
+	margin: 0;
+	padding-left: 18px;
+	font-size: 13px;
+}
+
+.sidebar-box ul li {
+	margin-bottom: 4px;
+}
+
+.sidebar-box--cta {
+	background: var(--color-bg-light);
+	text-align: center;
+}
+
+.sidebar-box--cta .btn {
+	display: block;
+	margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+	.article-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ---- Zalo floating button ---- */
+.zalo-float {
+	position: fixed;
+	bottom: 24px;
+	left: 24px;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #0068ff;
+	color: #fff;
+	padding: 10px 16px;
+	border-radius: 999px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.zalo-float svg {
+	width: 20px;
+	height: 20px;
+	fill: #fff;
+}
+
+/* ---- Products: brand grouping & related ---- */
+.products-brand-title {
+	margin-top: 32px;
+}
+
+.product-page__related {
+	grid-column: 1 / -1;
+	margin-top: 32px;
 }
 
 .article__title {

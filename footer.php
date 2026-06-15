@@ -98,6 +98,16 @@ $stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
 		</div>
 	</footer>
 
+	<?php
+	$zalo_so = thokhoa247_get_field( 'zalo_so', 'option', $contact['zalo'] );
+	if ( $zalo_so ) :
+		?>
+		<a class="zalo-float" href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', $zalo_so ) ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e( 'Chat Zalo', 'thokhoa247' ); ?>">
+			<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 5.8 2 10.5c0 2.6 1.4 4.9 3.6 6.5-.2.9-.6 2.1-.8 2.8-.1.3.2.6.5.5 1-.3 2.5-.9 3.4-1.4 1 .3 2.1.4 3.3.4 5.5 0 10-3.8 10-8.8S17.5 2 12 2z"/></svg>
+			<span><?php esc_html_e( 'Chat Zalo', 'thokhoa247' ); ?></span>
+		</a>
+	<?php endif; ?>
+
 <?php wp_footer(); ?>
 </body>
 </html>

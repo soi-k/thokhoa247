@@ -35,25 +35,39 @@ function thokhoa247_register_acf_fields() {
 			'title'    => 'Trang chủ - Hero & Giới thiệu',
 			'fields'   => array(
 				array(
-					'key'   => 'field_hero_title',
-					'label' => 'Tiêu đề Hero',
-					'name'  => 'hero_title',
-					'type'  => 'text',
-					'default_value' => 'KHÓA THÔNG MINH',
-				),
-				array(
-					'key'   => 'field_hero_subtitle',
-					'label' => 'Phụ đề Hero',
-					'name'  => 'hero_subtitle',
-					'type'  => 'text',
-					'default_value' => 'Hàng chính hãng - Mẫu mã đa dạng - Giá cạnh tranh',
-				),
-				array(
-					'key'   => 'field_hero_image',
-					'label' => 'Ảnh Hero',
-					'name'  => 'hero_image',
-					'type'  => 'image',
-					'return_format' => 'url',
+					'key'        => 'field_hero_slides',
+					'label'      => 'Banner trang chủ (Slider)',
+					'name'       => 'hero_slides',
+					'type'       => 'repeater',
+					'layout'     => 'block',
+					'button_label' => 'Thêm banner',
+					'sub_fields' => array(
+						array(
+							'key'   => 'field_hero_slide_title',
+							'label' => 'Tiêu đề',
+							'name'  => 'title',
+							'type'  => 'text',
+						),
+						array(
+							'key'   => 'field_hero_slide_subtitle',
+							'label' => 'Phụ đề',
+							'name'  => 'subtitle',
+							'type'  => 'text',
+						),
+						array(
+							'key'   => 'field_hero_slide_image',
+							'label' => 'Ảnh banner',
+							'name'  => 'image',
+							'type'  => 'image',
+							'return_format' => 'url',
+						),
+						array(
+							'key'   => 'field_hero_slide_link',
+							'label' => 'Đường dẫn (khi bấm vào banner)',
+							'name'  => 'link',
+							'type'  => 'url',
+						),
+					),
 				),
 				array(
 					'key'   => 'field_about_image',
@@ -81,6 +95,12 @@ function thokhoa247_register_acf_fields() {
 					'name'       => 'gallery_du_an',
 					'type'       => 'gallery',
 					'return_format' => 'url',
+				),
+				array(
+					'key'   => 'field_zalo_so',
+					'label' => 'Số điện thoại Zalo (cho nút chat nổi)',
+					'name'  => 'zalo_so',
+					'type'  => 'text',
 				),
 			),
 			'location' => array(

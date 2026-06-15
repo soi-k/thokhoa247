@@ -79,6 +79,21 @@ function thokhoa247_register_cpt_san_pham() {
 			'rewrite'           => array( 'slug' => 'loai-san-pham' ),
 		)
 	);
+
+	register_taxonomy(
+		'thuong-hieu',
+		'san-pham',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Thương hiệu', 'thokhoa247' ),
+				'singular_name' => __( 'Thương hiệu', 'thokhoa247' ),
+			),
+			'public'       => true,
+			'show_in_rest' => true,
+			'hierarchical' => true,
+			'rewrite'      => array( 'slug' => 'thuong-hieu' ),
+		)
+	);
 }
 add_action( 'init', 'thokhoa247_register_cpt_san_pham' );
 
@@ -205,6 +220,47 @@ function thokhoa247_insert_mid_content_cta( $content ) {
 	return $content . $cta;
 }
 add_filter( 'the_content', 'thokhoa247_insert_mid_content_cta', 20 );
+
+/**
+ * In ra grid sản phẩm (product-card) cho một mảng WP_Post.
+ * Dùng ở archive-san-pham.php (nhóm theo thương hiệu) và các nơi khác.
+ */
+function thokhoa247_render_product_grid( $posts ) {
+	?>
+	<div class="products-featured__grid">
+		<?php foreach ( $posts as $product ) : ?>
+			<?php
+			$gia_sale = thokhoa247_get_field( 'gia_sale', $product->ID, 0 );
+			$gia_goc  = thokhoa247_get_field( 'gia_goc', $product->ID, 0 );
+			$percent  = ( $gia_goc && $gia_sale ) ? round( ( 1 - $gia_sale / $gia_goc ) * 100 ) : 0;
+			?>
+			<a class="product-card" href="<?php echo esc_url( get_permalink( $product ) ); ?>">
+				<?php if ( $percent > 0 ) : ?>
+					<span class="product-card__badge">-<?php echo esc_html( $percent ); ?>%</span>
+				<?php endif; ?>
+				<div class="product-card__image">
+					<?php if ( has_post_thumbnail( $product ) ) : ?>
+						<?php echo get_the_post_thumbnail( $product, 'medium' ); ?>
+					<?php else : ?>
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/placeholder.svg' ); ?>" alt="" loading="lazy">
+					<?php endif; ?>
+				</div>
+				<div class="product-card__body">
+					<h3><?php echo esc_html( get_the_title( $product ) ); ?></h3>
+					<?php if ( $gia_sale ) : ?>
+						<p class="product-card__price">
+							<span class="product-card__price-sale"><?php echo esc_html( number_format( (float) $gia_sale, 0, ',', '.' ) ); ?> đ</span>
+							<?php if ( $gia_goc ) : ?>
+								<span class="product-card__price-old"><?php echo esc_html( number_format( (float) $gia_goc, 0, ',', '.' ) ); ?> đ</span>
+							<?php endif; ?>
+						</p>
+					<?php endif; ?>
+				</div>
+			</a>
+		<?php endforeach; ?>
+	</div>
+	<?php
+}
 
 /**
  * Helper: lấy field ACF với fallback an toàn.

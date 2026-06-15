@@ -91,6 +91,35 @@ while ( have_posts() ) :
 				</table>
 			</div>
 		<?php endif; ?>
+
+		<?php
+		$loai_terms = wp_get_post_terms( get_the_ID(), 'loai-san-pham', array( 'fields' => 'ids' ) );
+		$related    = array();
+
+		if ( ! empty( $loai_terms ) && ! is_wp_error( $loai_terms ) ) {
+			$related = get_posts(
+				array(
+					'post_type'      => 'san-pham',
+					'posts_per_page' => 4,
+					'post__not_in'   => array( get_the_ID() ),
+					'tax_query'      => array(
+						array(
+							'taxonomy' => 'loai-san-pham',
+							'field'    => 'term_id',
+							'terms'    => $loai_terms,
+						),
+					),
+				)
+			);
+		}
+
+		if ( ! empty( $related ) ) :
+			?>
+			<div class="product-page__related">
+				<h2 class="section-title section-title--left"><?php esc_html_e( 'Sản phẩm cùng loại', 'thokhoa247' ); ?></h2>
+				<?php thokhoa247_render_product_grid( $related ); ?>
+			</div>
+		<?php endif; ?>
 	</main>
 	<?php
 endwhile;
