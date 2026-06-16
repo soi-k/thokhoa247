@@ -69,6 +69,22 @@ function thokhoa247_save_options() {
 		update_option( 'thokhoa247_gallery_du_an', array_values( $gallery ) );
 	}
 
+	// Lưu services grid
+	$svcs = array();
+	if ( isset( $_POST['svc_title'] ) && is_array( $_POST['svc_title'] ) ) {
+		foreach ( $_POST['svc_title'] as $si => $t ) {
+			$svcs[] = array(
+				'title' => sanitize_text_field( wp_unslash( $t ) ),
+				'desc'  => sanitize_text_field( wp_unslash( $_POST['svc_desc'][ $si ] ?? '' ) ),
+				'link'  => esc_url_raw( wp_unslash( $_POST['svc_link'][ $si ] ?? '' ) ),
+				'icon'  => esc_url_raw( wp_unslash( $_POST['svc_icon'][ $si ] ?? '' ) ),
+			);
+		}
+	}
+	if ( ! empty( $svcs ) ) {
+		update_option( 'thokhoa247_services_grid', $svcs );
+	}
+
 	// Hero slides (tối đa 4)
 	$slides = array();
 	if ( isset( $_POST['slide_title'] ) && is_array( $_POST['slide_title'] ) ) {
@@ -188,6 +204,54 @@ function thokhoa247_render_options_page() {
 					</td>
 				</tr>
 			</table>
+
+			<!-- DANH SÁCH DỊCH VỤ TRONG LƯỚI -->
+			<h2 style="margin-top:28px">🔑 Danh sách dịch vụ trong lưới</h2>
+			<p style="color:#666">8 dịch vụ hiển thị ở section nền đỏ. Thêm ảnh tròn cho mỗi dịch vụ.</p>
+			<?php
+			$saved_services = get_option( 'thokhoa247_services_grid', array() );
+			$default_svcs   = thokhoa247_default_services_grid();
+			$svc_rows = array();
+			for ( $si = 0; $si < 8; $si++ ) {
+				$svc_rows[] = array(
+					'title' => $saved_services[ $si ]['title'] ?? ( $default_svcs[ $si ]['title'] ?? '' ),
+					'desc'  => $saved_services[ $si ]['desc']  ?? ( $default_svcs[ $si ]['desc']  ?? '' ),
+					'link'  => $saved_services[ $si ]['link']  ?? ( $default_svcs[ $si ]['link']  ?? '#' ),
+					'icon'  => $saved_services[ $si ]['icon']  ?? '',
+				);
+			}
+			?>
+			<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px">
+			<?php foreach ( $svc_rows as $si => $svc ) : ?>
+				<div style="border:1px solid #ddd;padding:14px;border-radius:4px;background:#f9f9f9">
+					<strong>Dịch vụ <?php echo $si + 1; ?></strong>
+					<table class="form-table" style="margin:8px 0 0">
+						<tr>
+							<th width="80" style="font-weight:normal">Tên</th>
+							<td><input type="text" name="svc_title[]" value="<?php echo esc_attr( $svc['title'] ); ?>" class="widefat"></td>
+						</tr>
+						<tr>
+							<th style="font-weight:normal">Mô tả</th>
+							<td><input type="text" name="svc_desc[]" value="<?php echo esc_attr( $svc['desc'] ); ?>" class="widefat"></td>
+						</tr>
+						<tr>
+							<th style="font-weight:normal">Link</th>
+							<td><input type="text" name="svc_link[]" value="<?php echo esc_attr( $svc['link'] ); ?>" class="widefat"></td>
+						</tr>
+						<tr>
+							<th style="font-weight:normal">Ảnh icon</th>
+							<td>
+								<input type="text" name="svc_icon[]" value="<?php echo esc_attr( $svc['icon'] ); ?>" class="widefat tk247-image-url" placeholder="URL ảnh tròn">
+								<button type="button" class="button button-small tk247-upload-btn" style="margin-top:4px">Chọn ảnh</button>
+								<?php if ( $svc['icon'] ) : ?>
+									<br><img src="<?php echo esc_url( $svc['icon'] ); ?>" style="width:56px;height:56px;object-fit:cover;border-radius:50%;margin-top:6px">
+								<?php endif; ?>
+							</td>
+						</tr>
+					</table>
+				</div>
+			<?php endforeach; ?>
+			</div>
 
 			<!-- GALLERY ẢNH -->
 			<h2>🖼 Hình ảnh cửa hàng</h2>

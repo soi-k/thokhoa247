@@ -396,11 +396,16 @@ a {
 .services-featured__grid,
 .products-featured__grid,
 .blog-news__grid,
-.areas__grid,
 .testimonials__grid {
 	display: grid;
 	gap: 24px;
 	grid-template-columns: repeat(3, 1fr);
+}
+
+.areas__grid {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .service-card {
