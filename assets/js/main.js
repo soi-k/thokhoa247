@@ -162,6 +162,60 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		revealEls.forEach( function ( el ) { el.classList.add( 'is-visible' ); } );
 	}
 
+	// Gallery sliders
+	document.querySelectorAll( '[data-gallery-slider]' ).forEach( function ( slider ) {
+		var slides = slider.querySelectorAll( '.gallery-slider__slide' );
+		var thumbs = slider.querySelectorAll( '[data-gallery-thumb]' );
+		var dots   = slider.querySelectorAll( '[data-gallery-dot]' );
+
+		var goTo = function ( idx ) {
+			slides.forEach( function ( s, i ) { s.classList.toggle( 'is-active', i === idx ); } );
+			thumbs.forEach( function ( t, i ) { t.classList.toggle( 'is-active', i === idx ); } );
+			dots.forEach( function ( d, i )   { d.classList.toggle( 'is-active', i === idx ); } );
+		};
+
+		thumbs.forEach( function ( t ) {
+			t.addEventListener( 'click', function () {
+				goTo( parseInt( t.getAttribute( 'data-gallery-thumb' ), 10 ) );
+			} );
+		} );
+
+		dots.forEach( function ( d ) {
+			d.addEventListener( 'click', function () {
+				goTo( parseInt( d.getAttribute( 'data-gallery-dot' ), 10 ) );
+			} );
+		} );
+	} );
+
+	// Testimonials slider
+	var testiSlider = document.querySelector( '[data-testi-slider]' );
+	if ( testiSlider ) {
+		var testiSlides = testiSlider.querySelectorAll( '.testimonials-slider__slide' );
+		var testiDots   = document.querySelectorAll( '[data-testi-dot]' );
+		var testiCur    = 0;
+		var testiTimer  = null;
+
+		var testiGo = function ( idx ) {
+			if ( idx < 0 ) idx = testiSlides.length - 1;
+			if ( idx >= testiSlides.length ) idx = 0;
+			testiSlides.forEach( function ( s, i ) { s.classList.toggle( 'is-active', i === idx ); } );
+			testiDots.forEach( function ( d, i )   { d.classList.toggle( 'is-active', i === idx ); } );
+			testiCur = idx;
+		};
+
+		testiDots.forEach( function ( d ) {
+			d.addEventListener( 'click', function () {
+				clearInterval( testiTimer );
+				testiGo( parseInt( d.getAttribute( 'data-testi-dot' ), 10 ) );
+				testiTimer = setInterval( function () { testiGo( testiCur + 1 ); }, 5000 );
+			} );
+		} );
+
+		if ( testiSlides.length > 1 ) {
+			testiTimer = setInterval( function () { testiGo( testiCur + 1 ); }, 5000 );
+		}
+	}
+
 	// Header shadow on scroll
 	var siteHeader = document.querySelector( '.site-header' );
 	if ( siteHeader ) {

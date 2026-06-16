@@ -1,6 +1,6 @@
 <?php
 /**
- * Ý kiến khách hàng - lấy từ CPT "danh-gia", fallback nội dung mặc định.
+ * Ý kiến khách hàng - dạng slider 2 card mỗi lần, có ảnh avatar tròn.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ $items = array();
 $query = new WP_Query(
 	array(
 		'post_type'      => 'danh-gia',
-		'posts_per_page' => 4,
+		'posts_per_page' => 6,
 	)
 );
 
@@ -35,25 +35,49 @@ if ( empty( $items ) ) {
 		$items[]        = $item;
 	}
 }
+
+// Chia thành cặp 2 item mỗi slide
+$slides = array_chunk( $items, 2 );
 ?>
 <section class="testimonials">
 	<div class="container">
-		<h2 class="section-title"><?php esc_html_e( 'Ý kiến khách hàng', 'thokhoa247' ); ?></h2>
-		<div class="testimonials__grid">
-			<?php foreach ( $items as $item ) : ?>
-				<div class="testimonial-card">
-					<div class="testimonial-card__avatar">
-						<img src="<?php echo esc_url( $item['avatar'] ? $item['avatar'] : get_template_directory_uri() . '/assets/images/avatar-placeholder.svg' ); ?>" alt="<?php echo esc_attr( $item['name'] ); ?>" loading="lazy">
-					</div>
-					<div class="testimonial-card__body">
-						<p class="testimonial-card__content">"<?php echo esc_html( $item['content'] ); ?>"</p>
-						<p class="testimonial-card__name"><?php echo esc_html( $item['name'] ); ?></p>
-						<?php if ( ! empty( $item['role'] ) ) : ?>
-							<p class="testimonial-card__role"><?php echo esc_html( $item['role'] ); ?></p>
-						<?php endif; ?>
+		<h2 class="section-title">
+			<span style="color:var(--color-primary)">Ý KIẾN</span> KHÁCH HÀNG
+		</h2>
+
+		<div class="testimonials-slider" data-testi-slider>
+			<?php foreach ( $slides as $si => $pair ) : ?>
+				<div class="testimonials-slider__slide<?php echo 0 === $si ? ' is-active' : ''; ?>">
+					<div class="testimonials-slider__pair">
+						<?php foreach ( $pair as $item ) : ?>
+							<div class="testimonial-card">
+								<div class="testimonial-card__bubble">
+									<p><?php echo esc_html( $item['content'] ); ?></p>
+								</div>
+								<div class="testimonial-card__author">
+									<div class="testimonial-card__avatar">
+										<img src="<?php echo esc_url( $item['avatar'] ? $item['avatar'] : get_template_directory_uri() . '/assets/images/avatar-placeholder.svg' ); ?>" alt="<?php echo esc_attr( $item['name'] ); ?>" loading="lazy">
+									</div>
+									<div>
+										<p class="testimonial-card__name"><?php echo esc_html( strtoupper( $item['name'] ) ); ?></p>
+										<?php if ( ! empty( $item['role'] ) ) : ?>
+											<p class="testimonial-card__role"><?php echo esc_html( $item['role'] ); ?></p>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					</div>
 				</div>
 			<?php endforeach; ?>
 		</div>
+
+		<?php if ( count( $slides ) > 1 ) : ?>
+		<div class="testimonials-slider__dots">
+			<?php foreach ( $slides as $si => $pair ) : ?>
+				<button type="button" class="testimonials-slider__dot<?php echo 0 === $si ? ' is-active' : ''; ?>" data-testi-dot="<?php echo $si; ?>"></button>
+			<?php endforeach; ?>
+		</div>
+		<?php endif; ?>
 	</div>
 </section>
