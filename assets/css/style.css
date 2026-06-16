@@ -285,24 +285,20 @@ a {
 .hero {
 	position: relative;
 	overflow: hidden;
+	line-height: 0;
 }
 
 .hero-slider {
 	position: relative;
-}
-
-.hero-slider {
-	position: relative;
+	line-height: 0;
 }
 
 .hero-slide {
-	background: linear-gradient(135deg, var(--color-secondary), #1d3f7a);
-	color: #fff;
-	padding: 48px 0;
+	display: block;
+	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.6s ease, visibility 0.6s ease;
@@ -316,30 +312,12 @@ a {
 	pointer-events: auto;
 }
 
-.hero__inner {
-	display: flex;
-	align-items: center;
-	gap: 32px;
-	flex-wrap: wrap;
-}
-
-.hero__content {
-	flex: 1 1 320px;
-}
-
-.hero__title {
-	font-size: 48px;
-	margin: 0 0 8px;
-}
-
-.hero__subtitle {
-	font-size: 18px;
-	margin: 0 0 24px;
-	opacity: 0.9;
-}
-
-.hero__image {
-	flex: 1 1 320px;
+.hero-slide img {
+	width: 100%;
+	height: auto;
+	display: block;
+	max-height: 560px;
+	object-fit: cover;
 }
 
 .hero-slider__nav {
