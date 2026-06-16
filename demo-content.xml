@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- WordPress eXtended RSS - WXR export file
+     Nhập bằng: WP Admin → Tools → Import → WordPress -->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+	<title>Thợ Khóa 247</title>
+	<link>https://thokhoa247.com</link>
+	<description>Demo content import</description>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://thokhoa247.com</wp:base_site_url>
+	<wp:base_blog_url>https://thokhoa247.com</wp:base_blog_url>
+
+	<!-- ===== CATEGORIES ===== -->
+	<wp:category>
+		<wp:term_id>10</wp:term_id>
+		<wp:category_nicename>dich-vu-noi-bat</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Dịch vụ nổi bật]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>11</wp:term_id>
+		<wp:category_nicename>tin-tuc</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Tin tức]]></wp:cat_name>
+	</wp:category>
+
+	<!-- ===== TAXONOMY: khu-vuc ===== -->
+	<wp:term>
+		<wp:term_id>100</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>sua-khoa-tai-ha-noi</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Sửa khóa tại Hà Nội]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>110</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>hoan-kiem</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Hoàn Kiếm]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>111</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>dong-da</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Đống Đa]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>112</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>ba-dinh</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Ba Đình]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>113</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>cau-giay</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Cầu Giấy]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>114</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>thanh-xuan</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Thanh Xuân]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>115</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>hai-ba-trung</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Hai Bà Trưng]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>116</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>ha-dong</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Hà Đông]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>117</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>nam-tu-liem</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Nam Từ Liêm]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>118</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>long-bien</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Long Biên]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>119</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>hoang-mai</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Hoàng Mai]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>120</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>tay-ho</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Tây Hồ]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>121</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>gia-lam</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-ha-noi</wp:term_parent>
+		<wp:term_name><![CDATA[Gia Lâm]]></wp:term_name>
+	</wp:term>
+
+	<wp:term>
+		<wp:term_id>101</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>sua-khoa-tai-sai-gon</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Sửa khóa tại Sài Gòn]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>130</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-1</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 1]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>131</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-3</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 3]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>132</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-4</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 4]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>133</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-5</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 5]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>134</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-7</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 7]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>135</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-8</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 8]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>136</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-10</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 10]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>137</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-11</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 11]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>138</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>quan-12</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Quận 12]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>139</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>tan-binh</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Tân Bình]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>140</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>binh-thanh</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Bình Thạnh]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>141</wp:term_id>
+		<wp:term_taxonomy>khu-vuc</wp:term_taxonomy>
+		<wp:term_slug>binh-tan</wp:term_slug>
+		<wp:term_parent>sua-khoa-tai-sai-gon</wp:term_parent>
+		<wp:term_name><![CDATA[Bình Tân]]></wp:term_name>
+	</wp:term>
+
+	<!-- ===== TAXONOMY: loai-san-pham ===== -->
+	<wp:term>
+		<wp:term_id>200</wp:term_id>
+		<wp:term_taxonomy>loai-san-pham</wp:term_taxonomy>
+		<wp:term_slug>ban-chay</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Bán chạy]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>201</wp:term_id>
+		<wp:term_taxonomy>loai-san-pham</wp:term_taxonomy>
+		<wp:term_slug>khoa-dong</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Khóa đồng]]></wp:term_name>
+	</wp:term>
+
+	<!-- ===== TAXONOMY: thuong-hieu ===== -->
+	<wp:term>
+		<wp:term_id>300</wp:term_id>
+		<wp:term_taxonomy>thuong-hieu</wp:term_taxonomy>
+		<wp:term_slug>kaadas</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Kaadas]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>301</wp:term_id>
+		<wp:term_taxonomy>thuong-hieu</wp:term_taxonomy>
+		<wp:term_slug>philips</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Philips]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>302</wp:term_id>
+		<wp:term_taxonomy>thuong-hieu</wp:term_taxonomy>
+		<wp:term_slug>yale</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Yale]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>303</wp:term_id>
+		<wp:term_taxonomy>thuong-hieu</wp:term_taxonomy>
+		<wp:term_slug>viet-tiep</wp:term_slug>
+		<wp:term_parent></wp:term_parent>
+		<wp:term_name><![CDATA[Việt Tiệp]]></wp:term_name>
+	</wp:term>
+
+	<!-- ===================================================== -->
+	<!-- BÀI VIẾT DỊCH VỤ NỔI BẬT                             -->
+	<!-- ===================================================== -->
+
+	<item>
+		<title><![CDATA[Báo giá làm chìa khóa ô tô tại nhà – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/bao-gia-lam-chia-khoa-o-to-tai-nha/</link>
+		<pubDate>Mon, 16 Jun 2025 07:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[
+<h2>Làm chìa khóa ô tô tại nhà – Nhanh, Uy tín, Giá rẻ</h2>
+<p>Bạn bị mất chìa khóa ô tô hoặc cần làm thêm chìa dự phòng? Thợ Khóa 247 cung cấp dịch vụ <strong>làm chìa khóa ô tô tại nhà</strong> với thợ lành nghề, thiết bị lập trình chuyên dụng, phục vụ tất cả các hãng xe phổ biến tại Việt Nam.</p>
+
+<h2>Thợ Khóa 247 làm được chìa khóa loại nào?</h2>
+<ul>
+<li>Chìa khóa cơ (chìa thường, chìa bổ)</li>
+<li>Chìa khóa remote (bấm từ xa mở/khóa cửa)</li>
+<li>Chìa khóa thông minh (smartkey) có nút Start/Stop</li>
+<li>Chìa khóa gập (flip key) đa năng</li>
+<li>Thẻ từ (card key) dòng xe cao cấp</li>
+</ul>
+
+<h2>Bảng giá tham khảo làm chìa khóa ô tô</h2>
+<p>Giá dao động tùy theo hãng xe và loại chìa. Dưới đây là mức giá tham khảo năm 2025:</p>
+<ul>
+<li>Chìa khóa cơ thông thường: <strong>300.000 – 500.000đ</strong></li>
+<li>Chìa remote cơ bản: <strong>500.000 – 1.200.000đ</strong></li>
+<li>Smartkey Toyota, Honda, Mazda: <strong>1.500.000 – 3.000.000đ</strong></li>
+<li>Smartkey BMW, Mercedes, Audi: <strong>3.000.000 – 6.000.000đ</strong></li>
+</ul>
+<p><em>* Giá trên chưa bao gồm VAT. Báo giá chính xác sau khi kiểm tra xe thực tế.</em></p>
+
+<h2>Tại sao chọn Thợ Khóa 247?</h2>
+<ul>
+<li>Thợ đến tận nơi trong vòng <strong>15–30 phút</strong></li>
+<li>Phục vụ <strong>24/7</strong>, kể cả lễ, Tết</li>
+<li>Thiết bị lập trình nhập khẩu chính hãng</li>
+<li>Bảo hành chìa khóa <strong>12 tháng</strong></li>
+<li>Giá rẻ hơn <strong>30–50%</strong> so với hãng xe</li>
+</ul>
+
+<h2>Hotline đặt dịch vụ</h2>
+<p>Gọi ngay <strong>0919.188.881</strong> (Hà Nội) hoặc <strong>0981.51.50.50</strong> (Sài Gòn) để được báo giá miễn phí và đặt lịch thợ đến tận nơi.</p>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[Dịch vụ làm chìa khóa ô tô tại nhà của Thợ Khóa 247 – Thợ đến trong 15 phút, hỗ trợ mọi hãng xe, giá rẻ hơn hãng 30-50%, bảo hành 12 tháng.]]></excerpt:encoded>
+		<wp:post_id>1001</wp:post_id>
+		<wp:post_date>2025-06-16 07:00:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 00:00:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>bao-gia-lam-chia-khoa-o-to-tai-nha</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="dich-vu-noi-bat"><![CDATA[Dịch vụ nổi bật]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa cửa cuốn tại nhà – Có mặt sau 15 phút]]></title>
+		<link>https://thokhoa247.com/sua-khoa-cua-cuon-tai-nha/</link>
+		<pubDate>Mon, 16 Jun 2025 07:30:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[
+<h2>Dịch vụ sửa khóa cửa cuốn chuyên nghiệp tại nhà</h2>
+<p>Cửa cuốn bị kẹt, remote mất tín hiệu, motor hỏng... Thợ Khóa 247 nhận xử lý mọi sự cố cửa cuốn <strong>tại nhà bạn</strong>, nhanh chóng và đảm bảo chất lượng. Không cần tháo dỡ cửa, không mất công vận chuyển.</p>
+
+<h2>Các lỗi cửa cuốn chúng tôi xử lý</h2>
+<ul>
+<li>Cửa cuốn không lên, không xuống</li>
+<li>Remote điều khiển mất tín hiệu, hỏng nút bấm</li>
+<li>Motor cửa cuốn phát ra tiếng kêu lạ</li>
+<li>Cửa lệch ray, bị xô lệch một bên</li>
+<li>Cài đặt lại hành trình cửa cuốn</li>
+<li>Thay mới motor, remote, công tắc hành trình</li>
+</ul>
+
+<h2>Quy trình sửa chữa</h2>
+<p><strong>Bước 1:</strong> Gọi hotline – thợ xác nhận lịch đến trong vòng 15 phút.</p>
+<p><strong>Bước 2:</strong> Thợ kiểm tra, chẩn đoán lỗi và báo giá minh bạch trước khi sửa.</p>
+<p><strong>Bước 3:</strong> Tiến hành sửa chữa tại chỗ – hoàn thành trong 30–60 phút.</p>
+<p><strong>Bước 4:</strong> Bàn giao, hướng dẫn vận hành và bảo hành 3–6 tháng.</p>
+
+<h2>Báo giá tham khảo</h2>
+<ul>
+<li>Sửa remote cửa cuốn: <strong>200.000 – 500.000đ</strong></li>
+<li>Thay motor cửa cuốn dân dụng: <strong>1.500.000 – 3.000.000đ</strong></li>
+<li>Cân chỉnh ray trượt: <strong>300.000 – 800.000đ</strong></li>
+</ul>
+
+<h2>Liên hệ ngay</h2>
+<p>Hotline Hà Nội: <strong>0919.188.881</strong> | Sài Gòn: <strong>0981.51.50.50</strong> – Phục vụ 24/7.</p>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa cửa cuốn tại nhà – Thợ Khóa 247 xử lý mọi sự cố: motor hỏng, remote mất tín hiệu, cửa kẹt, lệch ray. Có mặt sau 15 phút, bảo hành 3-6 tháng.]]></excerpt:encoded>
+		<wp:post_id>1002</wp:post_id>
+		<wp:post_date>2025-06-16 07:30:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 00:30:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-cua-cuon-tai-nha</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="dich-vu-noi-bat"><![CDATA[Dịch vụ nổi bật]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa két sắt – Mở khóa không phá két, không mất dữ liệu]]></title>
+		<link>https://thokhoa247.com/sua-khoa-ket-sat/</link>
+		<pubDate>Mon, 16 Jun 2025 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[
+<h2>Dịch vụ mở khóa và sửa khóa két sắt chuyên nghiệp</h2>
+<p>Quên mã két sắt, ổ khóa bị kẹt, pin hết... là những tình huống thường gặp. Thợ Khóa 247 có kỹ thuật <strong>mở khóa két sắt không phá két</strong>, không làm hỏng két, giữ nguyên toàn bộ tài sản bên trong.</p>
+
+<h2>Chúng tôi xử lý được két sắt loại nào?</h2>
+<ul>
+<li>Két sắt khóa mã số (nhập mật khẩu)</li>
+<li>Két sắt khóa chìa cơ</li>
+<li>Két sắt khóa điện tử vân tay</li>
+<li>Két sắt khóa đồng hồ (dial lock)</li>
+<li>Két sắt các thương hiệu: Hòa Phát, Betar, FireKing, Forter, Burg-Wachter...</li>
+</ul>
+
+<h2>Quy trình xử lý</h2>
+<p>Thợ sẽ kiểm tra loại két, xác định phương án mở phù hợp, tiến hành mở khóa bằng dụng cụ chuyên dụng mà không cần khoan phá. Sau khi mở xong, thợ đặt lại mật khẩu mới theo yêu cầu của bạn.</p>
+
+<h2>Chi phí mở khóa két sắt</h2>
+<ul>
+<li>Két sắt khóa số (quên mã): <strong>500.000 – 1.500.000đ</strong></li>
+<li>Két sắt khóa chìa (mất chìa): <strong>400.000 – 800.000đ</strong></li>
+<li>Két sắt khóa vân tay: <strong>600.000 – 1.200.000đ</strong></li>
+</ul>
+<p><em>* Giá phụ thuộc vào model và mức độ khó của két.</em></p>
+
+<h2>Cam kết dịch vụ</h2>
+<p>Cam kết mở khóa thành công 100% hoặc hoàn tiền. Bảo mật tuyệt đối thông tin khách hàng. Hotline: <strong>0919.188.881</strong>.</p>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[Dịch vụ mở khóa và sửa khóa két sắt của Thợ Khóa 247 – Mở không phá két, xử lý mọi loại két sắt, cam kết thành công 100% hoặc hoàn tiền.]]></excerpt:encoded>
+		<wp:post_id>1003</wp:post_id>
+		<wp:post_date>2025-06-16 08:00:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:00:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-ket-sat</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="dich-vu-noi-bat"><![CDATA[Dịch vụ nổi bật]]></category>
+	</item>
+
+	<!-- ===================================================== -->
+	<!-- BÀI VIẾT KHU VỰC HÀ NỘI                              -->
+	<!-- ===================================================== -->
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Hoàn Kiếm – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-hoan-kiem/</link>
+		<pubDate>Mon, 16 Jun 2025 08:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Hoàn Kiếm</h2><p>Thợ Khóa 247 cung cấp dịch vụ sửa khóa, làm chìa khóa, mở khóa tại Quận Hoàn Kiếm – Hà Nội. Thợ có mặt sau 15 phút, phục vụ 24/7 tất cả các ngày trong tuần.</p><h2>Dịch vụ tại Hoàn Kiếm</h2><ul><li>Sửa khóa cửa nhà, cửa phòng</li><li>Làm chìa khóa xe máy, ô tô</li><li>Mở khóa két sắt</li><li>Sửa khóa cửa cuốn</li><li>Sao chép thẻ từ, thẻ thang máy</li></ul><p>Gọi ngay: <strong>0919.188.881</strong> – Phục vụ 24/7 tại Hoàn Kiếm và toàn Hà Nội.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa tại Quận Hoàn Kiếm – Thợ Khóa 247. Thợ đến sau 15 phút, phục vụ 24/7, giá rẻ, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1010</wp:post_id>
+		<wp:post_date>2025-06-16 08:00:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-hoan-kiem</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="hoan-kiem"><![CDATA[Hoàn Kiếm]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Đống Đa – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-dong-da/</link>
+		<pubDate>Mon, 16 Jun 2025 08:05:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Đống Đa</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Đống Đa – Hà Nội. Đội thợ chuyên nghiệp, có mặt nhanh, giá cả minh bạch, bảo hành dài hạn.</p><h2>Khu vực phục vụ tại Đống Đa</h2><p>Các phường: Cát Linh, Văn Miếu, Quốc Tử Giám, Láng Thượng, Láng Hạ, Thịnh Quang, Trung Liệt, Kim Liên, Trung Tự, Phương Liên...</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa, khóa cổng</li><li>Làm chìa khóa xe các loại</li><li>Mở khóa két sắt không phá két</li><li>Sửa, thay khóa cửa cuốn</li></ul><p>Hotline: <strong>0919.188.881</strong> – Có mặt trong 15 phút.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa tại Quận Đống Đa – Thợ Khóa 247. Phục vụ 24/7, thợ đến nhanh, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1011</wp:post_id>
+		<wp:post_date>2025-06-16 08:05:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:05:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-dong-da</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="dong-da"><![CDATA[Đống Đa]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Ba Đình – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-ba-dinh/</link>
+		<pubDate>Mon, 16 Jun 2025 08:10:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Ba Đình</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Ba Đình – Hà Nội, bao gồm các phường: Phúc Xá, Trúc Bạch, Vĩnh Phúc, Cống Vị, Liễu Giai, Nguyễn Trung Trực, Điện Biên, Ba Đình, Đội Cấn, Thành Công, Ngọc Hà, Ngọc Khánh, Giảng Võ, Kim Mã.</p><h2>Dịch vụ nổi bật tại Ba Đình</h2><ul><li>Sửa khóa cửa chung cư cao tầng</li><li>Làm chìa khóa smartkey ô tô</li><li>Sao chép thẻ thang máy chung cư lấy ngay</li><li>Sửa khóa cửa cuốn</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa tại Quận Ba Đình Hà Nội – Thợ Khóa 247 phục vụ 24/7, thợ lành nghề, giá rẻ.]]></excerpt:encoded>
+		<wp:post_id>1012</wp:post_id>
+		<wp:post_date>2025-06-16 08:10:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:10:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-ba-dinh</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="ba-dinh"><![CDATA[Ba Đình]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Cầu Giấy – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-cau-giay/</link>
+		<pubDate>Mon, 16 Jun 2025 08:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Cầu Giấy</h2><p>Thợ Khóa 247 cung cấp dịch vụ sửa khóa, làm chìa khóa tại Quận Cầu Giấy – Hà Nội. Phục vụ khu vực: Dịch Vọng, Dịch Vọng Hậu, Mai Dịch, Nghĩa Đô, Nghĩa Tân, Quan Hoa, Trung Hòa, Yên Hòa.</p><h2>Dịch vụ tại Cầu Giấy</h2><ul><li>Sửa, thay khóa cửa nhà – cửa văn phòng</li><li>Làm chìa xe máy, ô tô tại chỗ</li><li>Mở khóa két sắt quên mã</li><li>Sao chép thẻ thang máy các chung cư khu Cầu Giấy</li></ul><p>Hotline: <strong>0919.188.881</strong> – 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa tại Quận Cầu Giấy Hà Nội – Thợ Khóa 247. Có mặt nhanh, giá tốt, bảo hành dài hạn.]]></excerpt:encoded>
+		<wp:post_id>1013</wp:post_id>
+		<wp:post_date>2025-06-16 08:15:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:15:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-cau-giay</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="cau-giay"><![CDATA[Cầu Giấy]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Thanh Xuân – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-thanh-xuan/</link>
+		<pubDate>Mon, 16 Jun 2025 08:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Thanh Xuân</h2><p>Thợ Khóa 247 phục vụ toàn bộ Quận Thanh Xuân: Nhân Chính, Thượng Đình, Khương Trung, Khương Mai, Thanh Xuân Trung, Thanh Xuân Nam, Thanh Xuân Bắc, Kim Giang, Hạ Đình, Phương Liệt, Thanh Liệt.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa các loại</li><li>Làm chìa khóa ô tô, xe máy tại chỗ</li><li>Mở khóa két sắt</li><li>Sửa cửa cuốn</li><li>Lắp đặt khóa điện tử, vân tay</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Thanh Xuân – Thợ Khóa 247. Phục vụ 24/7, thợ lành nghề, giá rẻ, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1014</wp:post_id>
+		<wp:post_date>2025-06-16 08:20:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:20:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-thanh-xuan</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="thanh-xuan"><![CDATA[Thanh Xuân]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Hai Bà Trưng – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-hai-ba-trung/</link>
+		<pubDate>Mon, 16 Jun 2025 08:25:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Hai Bà Trưng</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Hai Bà Trưng – Hà Nội. Thợ có mặt nhanh chóng, xử lý mọi sự cố khóa cửa, chìa khóa xe tại khu vực Hai Bà Trưng.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa, mở khóa cửa nhà</li><li>Làm chìa xe máy, ô tô</li><li>Sao chép thẻ từ thang máy</li><li>Lắp khóa chống trộm</li></ul><p>Hotline: <strong>0919.188.881</strong> – Phục vụ 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Hai Bà Trưng – Thợ Khóa 247. Thợ lành nghề, nhanh chóng, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1015</wp:post_id>
+		<wp:post_date>2025-06-16 08:25:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:25:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-hai-ba-trung</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="hai-ba-trung"><![CDATA[Hai Bà Trưng]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Hà Đông – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-ha-dong/</link>
+		<pubDate>Mon, 16 Jun 2025 08:30:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Hà Đông</h2><p>Thợ Khóa 247 phục vụ toàn bộ khu vực Hà Đông: Văn Quán, Phúc La, Kiến Hưng, Nguyễn Trãi, Mộ Lao, La Khê, Yên Nghĩa... Thợ lành nghề, thiết bị chuyên dụng, giá cạnh tranh.</p><h2>Dịch vụ tại Hà Đông</h2><ul><li>Sửa khóa cửa nhà, cửa chung cư</li><li>Làm chìa ô tô smartkey</li><li>Lắp đặt khóa vân tay</li><li>Sửa cửa cuốn, thay remote</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Hà Đông – Thợ Khóa 247. Phục vụ 24/7, có mặt sau 15 phút.]]></excerpt:encoded>
+		<wp:post_id>1016</wp:post_id>
+		<wp:post_date>2025-06-16 08:30:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:30:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-ha-dong</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="ha-dong"><![CDATA[Hà Đông]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Nam Từ Liêm – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-nam-tu-liem/</link>
+		<pubDate>Mon, 16 Jun 2025 08:35:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Nam Từ Liêm</h2><p>Thợ Khóa 247 phục vụ khu vực Nam Từ Liêm: Mỹ Đình, Mễ Trì, Trung Hòa, Cầu Diễn, Xuân Phương, Phương Canh, Đại Mỗ, Tây Mỗ... Đặc biệt hỗ trợ các tòa chung cư cao tầng khu Mỹ Đình.</p><h2>Dịch vụ</h2><ul><li>Sao chép thẻ từ thang máy lấy ngay</li><li>Lắp khóa điện tử, vân tay các chung cư</li><li>Sửa khóa cửa nhà, cửa văn phòng</li><li>Làm chìa ô tô tại chỗ</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Nam Từ Liêm – Thợ Khóa 247. Phục vụ Mỹ Đình, Mễ Trì và toàn quận 24/7.]]></excerpt:encoded>
+		<wp:post_id>1017</wp:post_id>
+		<wp:post_date>2025-06-16 08:35:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:35:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-nam-tu-liem</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="nam-tu-liem"><![CDATA[Nam Từ Liêm]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Long Biên – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-long-bien/</link>
+		<pubDate>Mon, 16 Jun 2025 08:40:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Long Biên</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Long Biên – Hà Nội: Bồ Đề, Gia Thụy, Giang Biên, Long Biên, Ngọc Lâm, Ngọc Thụy, Phúc Đồng, Phúc Lợi, Sài Đồng, Thạch Bàn, Thượng Thanh, Việt Hưng.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa, thay khóa cửa nhà</li><li>Làm chìa khóa ô tô, xe máy</li><li>Mở khóa két sắt</li><li>Lắp khóa chống trộm</li></ul><p>Hotline: <strong>0919.188.881</strong> – 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Long Biên – Thợ Khóa 247. Thợ đến nhanh, phục vụ 24/7.]]></excerpt:encoded>
+		<wp:post_id>1018</wp:post_id>
+		<wp:post_date>2025-06-16 08:40:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:40:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-long-bien</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="long-bien"><![CDATA[Long Biên]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Hoàng Mai – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-hoang-mai/</link>
+		<pubDate>Mon, 16 Jun 2025 08:45:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Hoàng Mai</h2><p>Thợ Khóa 247 phục vụ sửa khóa 24/7 tại Quận Hoàng Mai: Đại Kim, Định Công, Giáp Bát, Hoàng Liệt, Hoàng Văn Thụ, Lĩnh Nam, Mai Động, Tân Mai, Thanh Trì, Thịnh Liệt, Tương Mai, Trần Phú, Vĩnh Hưng, Yên Sở.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa nhà, cổng</li><li>Làm chìa dự phòng xe máy, ô tô</li><li>Sửa cửa cuốn</li><li>Thay ổ khóa mới</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Hoàng Mai – Thợ Khóa 247. Phục vụ 24/7, thợ đến trong 15 phút.]]></excerpt:encoded>
+		<wp:post_id>1019</wp:post_id>
+		<wp:post_date>2025-06-16 08:45:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:45:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-hoang-mai</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="hoang-mai"><![CDATA[Hoàng Mai]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Tây Hồ – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-tay-ho/</link>
+		<pubDate>Mon, 16 Jun 2025 08:50:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Tây Hồ</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Tây Hồ – Hà Nội: Bưởi, Nhật Tân, Phú Thượng, Quảng An, Tứ Liên, Xuân La, Yên Phụ, Thụy Khuê.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa biệt thự, nhà phố khu Tây Hồ</li><li>Lắp khóa điện tử, vân tay cao cấp</li><li>Làm chìa khóa ô tô smartkey</li><li>Sao chép thẻ từ thang máy</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Tây Hồ – Thợ Khóa 247. Phục vụ 24/7, thợ lành nghề.]]></excerpt:encoded>
+		<wp:post_id>1020</wp:post_id>
+		<wp:post_date>2025-06-16 08:50:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:50:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-tay-ho</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="tay-ho"><![CDATA[Tây Hồ]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Huyện Gia Lâm – Thợ Khóa 247]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-huyen-gia-lam/</link>
+		<pubDate>Mon, 16 Jun 2025 08:55:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Gia Lâm</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Gia Lâm: Trâu Quỳ, Đông Anh, Yên Viên, Ninh Hiệp, Bát Tràng... Thợ đến tận nơi, phục vụ 24/7, giá cạnh tranh.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa nhà, cửa kho xưởng</li><li>Làm chìa xe máy, ô tô</li><li>Mở khóa két sắt</li></ul><p>Hotline: <strong>0919.188.881</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Gia Lâm – Thợ Khóa 247. Phục vụ 24/7, thợ đến nhanh, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1021</wp:post_id>
+		<wp:post_date>2025-06-16 08:55:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 01:55:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-huyen-gia-lam</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="gia-lam"><![CDATA[Gia Lâm]]></category>
+	</item>
+
+	<!-- ===================================================== -->
+	<!-- BÀI VIẾT KHU VỰC SÀI GÒN                             -->
+	<!-- ===================================================== -->
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận 1 – Thợ Khóa 247 Sài Gòn]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-1-sai-gon/</link>
+		<pubDate>Mon, 16 Jun 2025 09:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận 1 – TP.HCM</h2><p>Thợ Khóa 247 phục vụ sửa khóa, làm chìa khóa tại Quận 1 – TP.HCM. Thợ đến trong vòng 15 phút, phục vụ 24/7 kể cả ngày lễ.</p><h2>Khu vực phục vụ</h2><p>Bến Nghé, Bến Thành, Cầu Kho, Cầu Ông Lãnh, Cô Giang, Đa Kao, Nguyễn Cư Trinh, Nguyễn Thái Bình, Phạm Ngũ Lão, Tân Định.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa khách sạn, văn phòng</li><li>Làm chìa ô tô smartkey</li><li>Thay ổ khóa chống trộm cao cấp</li><li>Sao chép thẻ từ thang máy tòa nhà</li></ul><p>Hotline: <strong>0981.51.50.50</strong> – Phục vụ 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận 1 HCM – Thợ Khóa 247. Thợ đến nhanh, phục vụ 24/7, giá cạnh tranh.]]></excerpt:encoded>
+		<wp:post_id>1030</wp:post_id>
+		<wp:post_date>2025-06-16 09:00:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 02:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-1-sai-gon</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="quan-1"><![CDATA[Quận 1]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận 3 – Thợ Khóa 247 Sài Gòn]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-3-sai-gon/</link>
+		<pubDate>Mon, 16 Jun 2025 09:05:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận 3 – TP.HCM</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận 3 TP.HCM: Võ Thị Sáu, Phường 1-14. Thợ lành nghề, đến nhanh, giá hợp lý.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa nhà, căn hộ</li><li>Làm chìa khóa dự phòng xe máy, ô tô</li><li>Lắp khóa điện tử vân tay</li><li>Thay ổ khóa cửa chống trộm</li></ul><p>Hotline: <strong>0981.51.50.50</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận 3 HCM – Thợ Khóa 247. Phục vụ 24/7, thợ đến nhanh.]]></excerpt:encoded>
+		<wp:post_id>1031</wp:post_id>
+		<wp:post_date>2025-06-16 09:05:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 02:05:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-3-sai-gon</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="quan-3"><![CDATA[Quận 3]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận 7 – Thợ Khóa 247 Sài Gòn]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-7-sai-gon/</link>
+		<pubDate>Mon, 16 Jun 2025 09:10:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận 7 – TP.HCM</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận 7: Phú Mỹ Hưng, Tân Phong, Tân Phú, Bình Thuận, Tân Hưng, Tân Quy, Tân Kiểng, Bình Tân. Chuyên sửa khóa chung cư, biệt thự khu Phú Mỹ Hưng.</p><h2>Dịch vụ</h2><ul><li>Lắp khóa điện tử, vân tay chung cư cao cấp</li><li>Sao chép thẻ từ thang máy lấy ngay</li><li>Làm chìa ô tô tại chỗ</li><li>Sửa cửa cuốn nhà xe</li></ul><p>Hotline: <strong>0981.51.50.50</strong> – 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận 7 HCM – Thợ Khóa 247. Chuyên khu Phú Mỹ Hưng, phục vụ 24/7.]]></excerpt:encoded>
+		<wp:post_id>1034</wp:post_id>
+		<wp:post_date>2025-06-16 09:10:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 02:10:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-7-sai-gon</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="quan-7"><![CDATA[Quận 7]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Tân Bình – Thợ Khóa 247 Sài Gòn]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-tan-binh/</link>
+		<pubDate>Mon, 16 Jun 2025 09:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Tân Bình – TP.HCM</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Tân Bình TP.HCM. Khu vực gần sân bay Tân Sơn Nhất, phục vụ nhà dân, khách sạn, văn phòng cho thuê.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa cửa nhà, phòng trọ</li><li>Làm chìa khóa ô tô, xe máy</li><li>Lắp khóa điện tử, mã số</li><li>Thay ổ khóa mới</li></ul><p>Hotline: <strong>0981.51.50.50</strong>.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Tân Bình HCM – Thợ Khóa 247. Phục vụ 24/7, giá rẻ, uy tín.]]></excerpt:encoded>
+		<wp:post_id>1039</wp:post_id>
+		<wp:post_date>2025-06-16 09:15:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 02:15:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-tan-binh</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="tan-binh"><![CDATA[Tân Bình]]></category>
+	</item>
+
+	<item>
+		<title><![CDATA[Sửa khóa tại Quận Bình Thạnh – Thợ Khóa 247 Sài Gòn]]></title>
+		<link>https://thokhoa247.com/sua-khoa-tai-quan-binh-thanh/</link>
+		<pubDate>Mon, 16 Jun 2025 09:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Dịch vụ sửa khóa tại Quận Bình Thạnh – TP.HCM</h2><p>Thợ Khóa 247 phục vụ sửa khóa tại Quận Bình Thạnh TP.HCM. Chi nhánh tại 201/96 Nguyễn Xí P26 và Điện Biên Phủ P15. Thợ đến nhanh nhất khu vực này.</p><h2>Dịch vụ</h2><ul><li>Sửa khóa, thay ổ khóa cửa nhà</li><li>Làm chìa xe máy, ô tô tại chỗ</li><li>Sao chép thẻ từ thang máy</li><li>Lắp khóa vân tay</li><li>Sửa cửa cuốn</li></ul><p>Hotline: <strong>0981.51.50.50</strong> – 24/7.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Sửa khóa Quận Bình Thạnh HCM – Thợ Khóa 247. Chi nhánh tại P26 Nguyễn Xí, phục vụ 24/7.]]></excerpt:encoded>
+		<wp:post_id>1040</wp:post_id>
+		<wp:post_date>2025-06-16 09:20:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 02:20:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>sua-khoa-tai-quan-binh-thanh</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="khu-vuc" nicename="binh-thanh"><![CDATA[Bình Thạnh]]></category>
+	</item>
+
+	<!-- ===================================================== -->
+	<!-- SẢN PHẨM (CPT san-pham)                               -->
+	<!-- ===================================================== -->
+
+	<item>
+		<title><![CDATA[Khóa thông minh Kaadas K20]]></title>
+		<link>https://thokhoa247.com/san-pham/khoa-thong-minh-kaadas-k20/</link>
+		<pubDate>Mon, 16 Jun 2025 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Khóa thông minh Kaadas K20 – Bảo vệ ngôi nhà của bạn</h2><p>Kaadas K20 là dòng khóa thông minh cao cấp với 6 phương thức mở khóa: vân tay, mã số, thẻ từ, chìa cơ, app điện thoại và phím bấm ẩn chống nhìn trộm. Phù hợp cho cửa chính nhà ở, chung cư, văn phòng.</p><h2>Thông số nổi bật</h2><ul><li>Nhận dạng vân tay trong 0.3 giây</li><li>Pin dùng được 12-18 tháng</li><li>Chống nước IPX5</li><li>Cảnh báo khi cố phá khóa</li><li>Kết nối app điều khiển từ xa</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Khóa thông minh Kaadas K20 – 6 phương thức mở khóa, chống nước IPX5, kết nối app điện thoại.]]></excerpt:encoded>
+		<wp:post_id>2001</wp:post_id>
+		<wp:post_date>2025-06-16 10:00:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>khoa-thong-minh-kaadas-k20</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="ban-chay"><![CDATA[Bán chạy]]></category>
+		<category domain="thuong-hieu" nicename="kaadas"><![CDATA[Kaadas]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[2800000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[3500000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Khóa vân tay Philips DDL702]]></title>
+		<link>https://thokhoa247.com/san-pham/khoa-van-tay-philips-ddl702/</link>
+		<pubDate>Mon, 16 Jun 2025 10:05:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Khóa vân tay Philips DDL702 – Thiết kế sang trọng</h2><p>Philips DDL702 là khóa vân tay cao cấp với thiết kế tối giản, màn hình LED, 5 phương thức mở khóa. Phù hợp cho căn hộ, villa, văn phòng hiện đại.</p><h2>Tính năng</h2><ul><li>Nhận vân tay tốc độ nhanh 0.5 giây</li><li>Lưu tới 100 vân tay</li><li>Mật khẩu giả chống nhìn trộm</li><li>Cảnh báo mở cưỡng bức SOS</li><li>Pin AA x4, dùng 12 tháng</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Khóa vân tay Philips DDL702 – Thiết kế sang trọng, 5 phương thức mở khóa, lưu 100 vân tay.]]></excerpt:encoded>
+		<wp:post_id>2002</wp:post_id>
+		<wp:post_date>2025-06-16 10:05:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:05:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>khoa-van-tay-philips-ddl702</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="ban-chay"><![CDATA[Bán chạy]]></category>
+		<category domain="thuong-hieu" nicename="philips"><![CDATA[Philips]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[3200000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[4200000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Khóa điện tử Yale YDM7116]]></title>
+		<link>https://thokhoa247.com/san-pham/khoa-dien-tu-yale-ydm7116/</link>
+		<pubDate>Mon, 16 Jun 2025 10:10:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Khóa điện tử Yale YDM7116 – Thương hiệu uy tín 180 năm</h2><p>Yale YDM7116 là dòng khóa điện tử cao cấp từ thương hiệu Yale – Mỹ, với thiết kế push/pull tiện lợi, bảo mật cao, phù hợp cửa gỗ và cửa thép.</p><h2>Tính năng nổi bật</h2><ul><li>Vân tay, mã số, thẻ từ, chìa cơ</li><li>Chống giật phá cơ học</li><li>Kết nối Bluetooth quản lý qua app Yale Access</li><li>Lưu 100 vân tay, 50 mã số</li><li>Bảo hành chính hãng 24 tháng</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Khóa điện tử Yale YDM7116 – Thương hiệu 180 năm, bảo mật cao, bảo hành 24 tháng.]]></excerpt:encoded>
+		<wp:post_id>2003</wp:post_id>
+		<wp:post_date>2025-06-16 10:10:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:10:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>khoa-dien-tu-yale-ydm7116</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="ban-chay"><![CDATA[Bán chạy]]></category>
+		<category domain="thuong-hieu" nicename="yale"><![CDATA[Yale]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[4500000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[5800000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Khóa đồng Việt Tiệp 60mm]]></title>
+		<link>https://thokhoa247.com/san-pham/khoa-dong-viet-tiep-60mm/</link>
+		<pubDate>Mon, 16 Jun 2025 10:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Khóa đồng Việt Tiệp 60mm – Bền bỉ, giá tốt</h2><p>Khóa đồng Việt Tiệp loại 60mm là sản phẩm khóa truyền thống chất lượng cao, thân khóa làm từ đồng nguyên chất, chống cắt, chống phá tốt. Phù hợp cho cổng, nhà kho, garage.</p><h2>Thông số</h2><ul><li>Chất liệu: Đồng nguyên chất</li><li>Kích thước thân: 60mm</li><li>Cơ chế: 4 bi chống phá</li><li>Kèm 3 chìa</li><li>Xuất xứ: Việt Nam</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Khóa đồng Việt Tiệp 60mm – Chất liệu đồng nguyên chất, 4 bi chống phá, bền bỉ.]]></excerpt:encoded>
+		<wp:post_id>2004</wp:post_id>
+		<wp:post_date>2025-06-16 10:15:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:15:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>khoa-dong-viet-tiep-60mm</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="khoa-dong"><![CDATA[Khóa đồng]]></category>
+		<category domain="thuong-hieu" nicename="viet-tiep"><![CDATA[Việt Tiệp]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[185000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[250000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Ổ khóa chống cắt ABUS 83/80]]></title>
+		<link>https://thokhoa247.com/san-pham/o-khoa-chong-cat-abus-83-80/</link>
+		<pubDate>Mon, 16 Jun 2025 10:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Ổ khóa chống cắt ABUS 83/80 – Bảo vệ tối đa</h2><p>ABUS 83/80 là dòng khóa chống cắt hạng nặng từ thương hiệu ABUS – Đức, thân khóa inox không gỉ, móc khóa được tôi cứng chống cưa cắt. Tiêu chuẩn bảo mật cấp 6/10 của ABUS.</p><h2>Đặc điểm</h2><ul><li>Thân: Inox không gỉ</li><li>Móc: Thép boron tôi cứng HRC 58</li><li>Cơ chế: 4 bi, chống xoay móc</li><li>Tiêu chuẩn: DIN/EN 12320 – Cấp 4</li><li>Bảo hành: 5 năm</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Ổ khóa chống cắt ABUS 83/80 – Thân inox, móc thép boron tôi cứng, bảo hành 5 năm.]]></excerpt:encoded>
+		<wp:post_id>2005</wp:post_id>
+		<wp:post_date>2025-06-16 10:20:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:20:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>o-khoa-chong-cat-abus-83-80</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="khoa-dong"><![CDATA[Khóa đồng]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[680000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[850000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Khóa cửa đồng Huy Hoàng HH02]]></title>
+		<link>https://thokhoa247.com/san-pham/khoa-cua-dong-huy-hoang-hh02/</link>
+		<pubDate>Mon, 16 Jun 2025 10:25:00 +0000</pubDate>
+		<dc:creator><![CDATA[thokhoad]]></dc:creator>
+		<content:encoded><![CDATA[<h2>Khóa cửa đồng Huy Hoàng HH02 – Lắp vừa mọi cửa gỗ</h2><p>Khóa cửa đồng Huy Hoàng HH02 là dòng khóa tay gạt bằng đồng vàng sáng bóng, phù hợp lắp cho cửa gỗ phòng ngủ, phòng khách, cửa văn phòng. Thiết kế cổ điển, sang trọng.</p><h2>Thông số</h2><ul><li>Chất liệu tay cầm: Đồng vàng</li><li>Cơ chế: Chốt lẫy + chốt thẳng</li><li>Kèm 3 chìa đồng</li><li>Lỗ cắt phù hợp cửa dày 35-45mm</li><li>Xuất xứ: Việt Nam</li></ul>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Khóa cửa đồng Huy Hoàng HH02 – Tay gạt đồng vàng, thiết kế cổ điển, phù hợp mọi cửa gỗ.]]></excerpt:encoded>
+		<wp:post_id>2006</wp:post_id>
+		<wp:post_date>2025-06-16 10:25:00</wp:post_date>
+		<wp:post_date_gmt>2025-06-16 03:25:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>khoa-cua-dong-huy-hoang-hh02</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>san-pham</wp:post_type>
+		<category domain="loai-san-pham" nicename="khoa-dong"><![CDATA[Khóa đồng]]></category>
+		<wp:postmeta>
+			<wp:meta_key>gia_sale</wp:meta_key>
+			<wp:meta_value><![CDATA[320000]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>gia_goc</wp:meta_key>
+			<wp:meta_value><![CDATA[420000]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+</channel>
+</rss>
