@@ -32,10 +32,30 @@ if ( $parent_term ) {
 
 	if ( ! is_wp_error( $children ) && ! empty( $children ) ) {
 		foreach ( $children as $child ) {
+			// Tìm bài viết đầu tiên gắn term này
+			$posts = get_posts(
+				array(
+					'posts_per_page' => 1,
+					'tax_query'      => array(
+						array(
+							'taxonomy' => 'khu-vuc',
+							'field'    => 'term_id',
+							'terms'    => $child->term_id,
+						),
+					),
+				)
+			);
+			$link = ! empty( $posts ) ? get_permalink( $posts[0] ) : get_term_link( $child );
+
+			// Lấy ảnh từ bài viết (nếu có)
+			$image = ! empty( $posts ) && has_post_thumbnail( $posts[0] )
+				? get_the_post_thumbnail_url( $posts[0], 'medium' )
+				: '';
+
 			$districts[] = array(
 				'title' => $child->name,
-				'link'  => get_term_link( $child ),
-				'image' => '',
+				'link'  => $link,
+				'image' => $image,
 			);
 		}
 	}
@@ -43,10 +63,22 @@ if ( $parent_term ) {
 
 if ( empty( $districts ) ) {
 	foreach ( thokhoa247_default_areas( $city ) as $name ) {
+		// Tìm bài viết theo tiêu đề chứa tên quận
+		$posts = get_posts(
+			array(
+				'posts_per_page' => 1,
+				's'              => $name,
+			)
+		);
+		$link  = ! empty( $posts ) ? get_permalink( $posts[0] ) : '';
+		$image = ! empty( $posts ) && has_post_thumbnail( $posts[0] )
+			? get_the_post_thumbnail_url( $posts[0], 'medium' )
+			: '';
+
 		$districts[] = array(
 			'title' => $name,
-			'link'  => '',
-			'image' => '',
+			'link'  => $link,
+			'image' => $image,
 		);
 	}
 }
