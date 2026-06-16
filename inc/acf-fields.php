@@ -125,6 +125,14 @@ function thokhoa247_register_acf_fields() {
 					'return_format' => 'url',
 				),
 				array(
+					'key'           => 'field_services_grid_bg',
+					'label'         => 'Ảnh nền lưới dịch vụ (parallax)',
+					'name'          => 'services_grid_bg',
+					'type'          => 'image',
+					'return_format' => 'url',
+					'instructions'  => 'Ảnh nền section "Lưới dịch vụ 3x3". Kích thước đề xuất: 1600x900px.',
+				),
+				array(
 					'key'   => 'field_zalo_so',
 					'label' => 'Số điện thoại Zalo (cho nút chat nổi)',
 					'name'  => 'zalo_so',

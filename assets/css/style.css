@@ -460,46 +460,112 @@ a {
 
 /* ---- Services grid (icon grid) ---- */
 .services-grid {
-	background: var(--color-bg-light);
-	padding: 32px 0;
+	position: relative;
+	padding: 56px 0;
+	background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.services-grid::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(160, 40, 10, 0.82);
+	z-index: 0;
+}
+
+.services-grid .container {
+	position: relative;
+	z-index: 1;
 }
 
 .services-grid__list {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 24px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px 40px;
 }
 
 .services-grid__item {
-	text-align: center;
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	text-align: left;
+	color: #fff;
 }
 
 .services-grid__icon {
-	display: inline-flex;
+	flex-shrink: 0;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 56px;
-	height: 56px;
+	width: 64px;
+	height: 64px;
 	border-radius: 50%;
-	background: #fff;
-	margin-bottom: 12px;
+	background: rgba(255, 255, 255, 0.15);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .services-grid__icon svg {
-	width: 28px;
-	height: 28px;
-	fill: var(--color-primary);
+	width: 32px;
+	height: 32px;
+	fill: #fff;
+}
+
+.services-grid__icon img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.services-grid__text {
+	flex: 1;
 }
 
 .services-grid__item h3 {
-	margin: 0 0 4px;
-	font-size: 16px;
+	margin: 0 0 6px;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 0.3px;
 }
 
 .services-grid__item p {
 	margin: 0;
 	font-size: 13px;
-	color: var(--color-muted);
+	color: rgba(255, 255, 255, 0.82);
+	line-height: 1.5;
+}
+
+a.services-grid__item {
+	text-decoration: none;
+	color: #fff;
+	transition: transform 0.2s;
+	display: flex;
+}
+
+a.services-grid__item:hover {
+	transform: translateY(-4px);
+}
+
+a.services-grid__item:hover h3 {
+	color: #ffd0b0;
+}
+
+@media (max-width: 768px) {
+	.services-grid__list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	.services-grid__list {
+		grid-template-columns: 1fr;
+	}
 }
 
 a.services-grid__item {
