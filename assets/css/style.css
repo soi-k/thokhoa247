@@ -1202,3 +1202,54 @@ a.area-card:hover .area-card__name {
 		grid-template-columns: 1fr;
 	}
 }
+
+/* ---- Smooth scroll & animation ---- */
+html { scroll-behavior: smooth; }
+
+/* Fade-in khi scroll vào viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card hover lift */
+.service-card, .product-card, .blog-card {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.service-card:hover, .product-card:hover, .blog-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  transform: translateY(-4px);
+}
+
+/* Testimonial card */
+.testimonial-card {
+  transition: box-shadow 0.25s ease;
+}
+.testimonial-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Button ripple feel */
+.btn {
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Header scroll shadow */
+.site-header {
+  transition: box-shadow 0.3s ease;
+}
+.site-header.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}

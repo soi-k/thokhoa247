@@ -141,4 +141,32 @@ document.addEventListener( 'DOMContentLoaded', function () {
 			}
 		} );
 	} );
+
+	// Reveal on scroll (IntersectionObserver)
+	var revealEls = document.querySelectorAll(
+		'.service-card, .services-grid__item, .area-card, .product-card, .blog-card, .testimonial-card, .about__reason, .section-title'
+	);
+	revealEls.forEach( function ( el ) { el.classList.add( 'reveal' ); } );
+
+	if ( 'IntersectionObserver' in window ) {
+		var observer = new IntersectionObserver( function ( entries ) {
+			entries.forEach( function ( entry ) {
+				if ( entry.isIntersecting ) {
+					entry.target.classList.add( 'is-visible' );
+					observer.unobserve( entry.target );
+				}
+			} );
+		}, { threshold: 0.1 } );
+		revealEls.forEach( function ( el ) { observer.observe( el ); } );
+	} else {
+		revealEls.forEach( function ( el ) { el.classList.add( 'is-visible' ); } );
+	}
+
+	// Header shadow on scroll
+	var siteHeader = document.querySelector( '.site-header' );
+	if ( siteHeader ) {
+		window.addEventListener( 'scroll', function () {
+			siteHeader.classList.toggle( 'scrolled', window.scrollY > 40 );
+		}, { passive: true } );
+	}
 } );
