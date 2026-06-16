@@ -169,6 +169,7 @@ add_action( 'init', 'thokhoa247_register_default_terms', 11 );
  * gallery cửa hàng/dự án và thông số kỹ thuật sản phẩm.
  */
 require_once get_template_directory() . '/inc/acf-fields.php';
+require_once get_template_directory() . '/inc/admin-options.php';
 
 /**
  * Theme options mặc định (dùng làm fallback khi chưa nhập ACF) như hotline,
@@ -264,13 +265,25 @@ function thokhoa247_render_product_grid( $posts ) {
 
 /**
  * Helper: lấy field ACF với fallback an toàn.
+ * Nếu post_id = 'option' thì ưu tiên đọc từ wp_options (thokhoa247_*)
+ * trước, rồi mới thử ACF (cần ACF Pro cho options page).
  */
 function thokhoa247_get_field( $field, $post_id = false, $default = '' ) {
+	// Với options page: thử wp_options trước (không cần ACF Pro)
+	if ( 'option' === $post_id ) {
+		$value = get_option( 'thokhoa247_' . $field, null );
+		if ( null !== $value && '' !== $value && array() !== $value ) {
+			return $value;
+		}
+	}
+
+	// Thử ACF (yêu cầu ACF free hoặc Pro)
 	if ( function_exists( 'get_field' ) ) {
 		$value = get_field( $field, $post_id );
 		if ( ! empty( $value ) ) {
 			return $value;
 		}
 	}
+
 	return $default;
 }
