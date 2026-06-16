@@ -11,6 +11,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $cards = array();
 
+// Ưu tiên 1: ACF option
+$acf_services = thokhoa247_get_field( 'services_featured', 'option', array() );
+if ( ! empty( $acf_services ) ) {
+	foreach ( $acf_services as $item ) {
+		$cards[] = array(
+			'title' => $item['title'],
+			'desc'  => $item['desc'],
+			'link'  => $item['link'],
+			'image' => $item['image'],
+		);
+	}
+}
+
+if ( ! empty( $cards ) ) {
+	// đã có ACF, bỏ qua WP_Query
+} else {
+
 $category = get_category_by_slug( 'dich-vu-noi-bat' );
 if ( $category ) {
 	$query = new WP_Query(
@@ -35,11 +52,12 @@ if ( $category ) {
 }
 
 if ( empty( $cards ) ) {
-	foreach ( thokhoa247_default_services_featured() as $item ) {
-		$item['image'] = '';
-		$cards[]       = $item;
+		foreach ( thokhoa247_default_services_featured() as $item ) {
+			$item['image'] = '';
+			$cards[]       = $item;
+		}
 	}
-}
+} // end if empty $cards (ACF)
 ?>
 <section class="services-featured">
 	<div class="container">

@@ -70,14 +70,14 @@ function thokhoa247_default_services_featured() {
  */
 function thokhoa247_default_services_grid() {
 	return array(
-		array( 'title' => 'Khóa ô tô', 'desc' => 'Làm chìa, sửa khóa, lập trình lại chìa khóa ô tô mọi hãng xe.' ),
-		array( 'title' => 'Sửa khóa cửa', 'desc' => 'Sửa, thay thế khóa cửa nhà, cửa phòng các loại khóa cơ, khóa số.' ),
-		array( 'title' => 'Sửa khóa két sắt', 'desc' => 'Mở khóa két sắt bị kẹt, quên mã, hỏng động cơ - không phá két.' ),
-		array( 'title' => 'Sửa khóa xe máy', 'desc' => 'Làm lại chìa khóa xe máy, sửa ổ khóa bị gãy, kẹt, mất chìa.' ),
-		array( 'title' => 'Sửa khóa mở máy', 'desc' => 'Sửa chữa hệ thống khóa mở máy ô tô, xe máy đời mới.' ),
-		array( 'title' => 'Sửa khóa cửa cuốn', 'desc' => 'Sửa cửa cuốn, motor, remote, ray trượt cửa cuốn.' ),
-		array( 'title' => 'Sao chép thẻ thang máy lấy ngay', 'desc' => 'Sao chép thẻ từ thang máy, thẻ chung cư, lấy ngay trong 15 phút.' ),
-		array( 'title' => 'Sửa khóa Hall cấp số', 'desc' => 'Sửa, thay khóa Hall cấp số cho cửa cuốn công nghiệp.' ),
+		array( 'title' => 'Khóa ô tô',                    'desc' => 'Làm chìa, sửa khóa, lập trình lại chìa khóa ô tô mọi hãng xe.',        'link' => '#' ),
+		array( 'title' => 'Sửa khóa cửa',                'desc' => 'Sửa, thay thế khóa cửa nhà, cửa phòng các loại khóa cơ, khóa số.',       'link' => '#' ),
+		array( 'title' => 'Sửa khóa két sắt',            'desc' => 'Mở khóa két sắt bị kẹt, quên mã, hỏng động cơ - không phá két.',        'link' => '#' ),
+		array( 'title' => 'Sửa khóa xe máy',             'desc' => 'Làm lại chìa khóa xe máy, sửa ổ khóa bị gãy, kẹt, mất chìa.',          'link' => '#' ),
+		array( 'title' => 'Sửa khóa mở máy',             'desc' => 'Sửa chữa hệ thống khóa mở máy ô tô, xe máy đời mới.',                   'link' => '#' ),
+		array( 'title' => 'Sửa khóa cửa cuốn',           'desc' => 'Sửa cửa cuốn, motor, remote, ray trượt cửa cuốn.',                       'link' => '#' ),
+		array( 'title' => 'Sao chép thẻ thang máy lấy ngay', 'desc' => 'Sao chép thẻ từ thang máy, thẻ chung cư, lấy ngay trong 15 phút.',  'link' => '#' ),
+		array( 'title' => 'Sửa khóa Hall cấp số',        'desc' => 'Sửa, thay khóa Hall cấp số cho cửa cuốn công nghiệp.',                   'link' => '#' ),
 	);
 }
 
