@@ -613,12 +613,18 @@ a.services-grid__item:hover h3 {
 
 .area-card__image {
 	position: relative;
+	height: 100px;
+	background: #b0a89a;
 }
 
 .area-card__image img {
 	width: 100%;
 	height: 100px;
 	object-fit: cover;
+}
+
+.area-card__image--no-img {
+	background: linear-gradient(135deg, #a89880 0%, #8c7b6b 100%);
 }
 
 .area-card__name {

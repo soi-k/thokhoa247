@@ -10,6 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $gallery_cua_hang = thokhoa247_get_field( 'gallery_cua_hang', 'option', array() );
 $gallery_du_an    = thokhoa247_get_field( 'gallery_du_an', 'option', array() );
+
+// Lọc bỏ URL rỗng
+$gallery_cua_hang = array_filter( (array) $gallery_cua_hang );
+$gallery_du_an    = array_filter( (array) $gallery_du_an );
 ?>
 <section class="gallery-section">
 	<div class="container gallery-section__grid">

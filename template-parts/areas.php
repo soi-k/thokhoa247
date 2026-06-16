@@ -92,8 +92,10 @@ if ( empty( $districts ) ) {
 				$tag = $district['link'] ? 'a' : 'div';
 				?>
 				<<?php echo esc_html( $tag ); ?> class="area-card" <?php echo $district['link'] ? 'href="' . esc_url( $district['link'] ) . '"' : ''; ?>>
-					<div class="area-card__image">
-						<img src="<?php echo esc_url( $district['image'] ? $district['image'] : get_template_directory_uri() . '/assets/images/placeholder.svg' ); ?>" alt="<?php echo esc_attr( $district['title'] ); ?>" loading="lazy">
+					<div class="area-card__image<?php echo empty( $district['image'] ) ? ' area-card__image--no-img' : ''; ?>">
+						<?php if ( ! empty( $district['image'] ) ) : ?>
+							<img src="<?php echo esc_url( $district['image'] ); ?>" alt="<?php echo esc_attr( $district['title'] ); ?>" loading="lazy">
+						<?php endif; ?>
 						<span class="area-card__name"><?php echo esc_html( $district['title'] ); ?></span>
 					</div>
 					<p class="area-card__caption"><?php echo esc_html( sprintf( /* translators: %s: tên quận/khu vực */ __( 'Sửa khóa Quận %s', 'thokhoa247' ), $district['title'] ) ); ?></p>

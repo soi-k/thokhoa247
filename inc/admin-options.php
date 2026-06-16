@@ -44,7 +44,7 @@ function thokhoa247_save_options() {
 
 	$text_fields = array(
 		'hotline', 'hotline_mien_nam', 'working_hours', 'zalo_so',
-		'about_content', 'services_grid_bg', 'about_image',
+		'services_grid_bg', 'about_image',
 	);
 	foreach ( $text_fields as $field ) {
 		if ( isset( $_POST[ $field ] ) ) {
@@ -55,6 +55,18 @@ function thokhoa247_save_options() {
 	// Lưu about_content với wp_kses_post
 	if ( isset( $_POST['about_content'] ) ) {
 		update_option( 'thokhoa247_about_content', wp_kses_post( wp_unslash( $_POST['about_content'] ) ) );
+	}
+
+	// Gallery ảnh cửa hàng
+	if ( isset( $_POST['gallery_cua_hang'] ) && is_array( $_POST['gallery_cua_hang'] ) ) {
+		$gallery = array_filter( array_map( 'esc_url_raw', array_map( 'wp_unslash', $_POST['gallery_cua_hang'] ) ) );
+		update_option( 'thokhoa247_gallery_cua_hang', array_values( $gallery ) );
+	}
+
+	// Gallery ảnh dự án
+	if ( isset( $_POST['gallery_du_an'] ) && is_array( $_POST['gallery_du_an'] ) ) {
+		$gallery = array_filter( array_map( 'esc_url_raw', array_map( 'wp_unslash', $_POST['gallery_du_an'] ) ) );
+		update_option( 'thokhoa247_gallery_du_an', array_values( $gallery ) );
 	}
 
 	// Hero slides (tối đa 4)
@@ -176,6 +188,47 @@ function thokhoa247_render_options_page() {
 					</td>
 				</tr>
 			</table>
+
+			<!-- GALLERY ẢNH -->
+			<h2>🖼 Hình ảnh cửa hàng</h2>
+			<p style="color:#666">Upload tối đa 6 ảnh. Hiển thị ở phần "Hình ảnh cửa hàng" cuối trang chủ.</p>
+			<?php
+			$gallery_cua_hang = get_option( 'thokhoa247_gallery_cua_hang', array() );
+			while ( count( $gallery_cua_hang ) < 6 ) { $gallery_cua_hang[] = ''; }
+			?>
+			<div class="gallery-upload-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:700px">
+				<?php foreach ( $gallery_cua_hang as $idx => $url ) : ?>
+					<div style="border:1px solid #ddd;padding:8px;border-radius:4px;background:#fafafa">
+						<input type="text" name="gallery_cua_hang[]" value="<?php echo esc_attr( $url ); ?>" class="widefat tk247-image-url" placeholder="URL ảnh <?php echo $idx + 1; ?>">
+						<button type="button" class="button button-small tk247-upload-btn" style="margin-top:4px;width:100%">Chọn ảnh</button>
+						<?php if ( $url ) : ?>
+							<img src="<?php echo esc_url( $url ); ?>" style="width:100%;height:80px;object-fit:cover;margin-top:6px;border-radius:2px">
+						<?php else : ?>
+							<div style="width:100%;height:80px;margin-top:6px;background:#eee;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:11px">Chưa có ảnh</div>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
+
+			<h2 style="margin-top:32px">🖼 Hình ảnh dự án</h2>
+			<p style="color:#666">Upload tối đa 6 ảnh. Hiển thị ở phần "Hình ảnh dự án" cuối trang chủ.</p>
+			<?php
+			$gallery_du_an = get_option( 'thokhoa247_gallery_du_an', array() );
+			while ( count( $gallery_du_an ) < 6 ) { $gallery_du_an[] = ''; }
+			?>
+			<div class="gallery-upload-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:700px">
+				<?php foreach ( $gallery_du_an as $idx => $url ) : ?>
+					<div style="border:1px solid #ddd;padding:8px;border-radius:4px;background:#fafafa">
+						<input type="text" name="gallery_du_an[]" value="<?php echo esc_attr( $url ); ?>" class="widefat tk247-image-url" placeholder="URL ảnh <?php echo $idx + 1; ?>">
+						<button type="button" class="button button-small tk247-upload-btn" style="margin-top:4px;width:100%">Chọn ảnh</button>
+						<?php if ( $url ) : ?>
+							<img src="<?php echo esc_url( $url ); ?>" style="width:100%;height:80px;object-fit:cover;margin-top:6px;border-radius:2px">
+						<?php else : ?>
+							<div style="width:100%;height:80px;margin-top:6px;background:#eee;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:11px">Chưa có ảnh</div>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
 
 			<!-- SECTION GIỚI THIỆU -->
 			<h2>ℹ️ Giới thiệu công ty</h2>
