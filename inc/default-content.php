@@ -66,18 +66,19 @@ function thokhoa247_default_services_featured() {
 }
 
 /**
- * Lưới 8 dịch vụ (icon grid nền hồng nhạt)
+ * Lưới 9 dịch vụ (icon grid nền đỏ parallax) - theo thứ tự web gốc
  */
 function thokhoa247_default_services_grid() {
 	return array(
-		array( 'title' => 'Khóa ô tô',                    'desc' => 'Làm chìa, sửa khóa, lập trình lại chìa khóa ô tô mọi hãng xe.',        'link' => '#' ),
-		array( 'title' => 'Sửa khóa cửa',                'desc' => 'Sửa, thay thế khóa cửa nhà, cửa phòng các loại khóa cơ, khóa số.',       'link' => '#' ),
-		array( 'title' => 'Sửa khóa két sắt',            'desc' => 'Mở khóa két sắt bị kẹt, quên mã, hỏng động cơ - không phá két.',        'link' => '#' ),
-		array( 'title' => 'Sửa khóa xe máy',             'desc' => 'Làm lại chìa khóa xe máy, sửa ổ khóa bị gãy, kẹt, mất chìa.',          'link' => '#' ),
-		array( 'title' => 'Sửa khóa mở máy',             'desc' => 'Sửa chữa hệ thống khóa mở máy ô tô, xe máy đời mới.',                   'link' => '#' ),
-		array( 'title' => 'Sửa khóa cửa cuốn',           'desc' => 'Sửa cửa cuốn, motor, remote, ray trượt cửa cuốn.',                       'link' => '#' ),
-		array( 'title' => 'Sao chép thẻ thang máy lấy ngay', 'desc' => 'Sao chép thẻ từ thang máy, thẻ chung cư, lấy ngay trong 15 phút.',  'link' => '#' ),
-		array( 'title' => 'Sửa khóa Hall cấp số',        'desc' => 'Sửa, thay khóa Hall cấp số cho cửa cuốn công nghiệp.',                   'link' => '#' ),
+		array( 'title' => 'Khóa Ô Tô',                              'desc' => 'Thợ Khóa 247 là đơn vị thợ khóa ô tô uy tín tại Hà Nội, Hồ Chí Minh. Cung cấp tất cả các dịch vụ làm chìa, sửa khóa, lập trình chìa khóa ô tô mọi hãng.',              'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Cửa',                           'desc' => 'Thợ Khóa 247 sửa khóa cửa tại nhà, sửa khóa văn phòng, cơ quan trong tại Hà Nội, HCM. Dịch vụ nhanh nhất, giá tốt.',                                                      'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Két Sắt',                       'desc' => 'Dịch vụ sửa khóa két sắt nhanh, an toàn, giá rẻ. Thợ Khóa 247 chuyên khóa két sắt: mở khóa, đánh chìa khóa, sửa khóa.',                                                   'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Tủ',                            'desc' => 'Thợ Khóa 247 cung cấp dịch vụ sửa khóa tủ văn phòng, gia đình tại Hà Nội, HCM. Uy tín, chất lượng, giá rẻ.',                                                               'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Xe Máy',                        'desc' => 'Thợ Khóa 247 chuyên làm chìa, sửa khóa xe máy, đánh chìa khóa xe máy chuyên nghiệp, giá rẻ tại Hà Nội, HCM.',                                                              'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Cửa Cuốn',                      'desc' => 'Thợ Khóa 247 chuyên sửa khóa cửa cuốn, làm điều khiển cửa cuốn chuyên nghiệp, giá rẻ. Đặc biệt, phục vụ tận nơi 24/24.',                                                   'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sao Chép Thẻ Từ Thang Máy Tận Nơi Lấy Ngay [Chỉ Từ 30K]', 'desc' => 'Bạn đang cần tìm địa chỉ sao chép thẻ từ thang máy tận nơi cho số lượng nhỏ, lớn? Hãy để chúng tôi giúp bạn.',                                          'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Vali, Cặp Số',                  'desc' => 'Thợ Khóa 247 chuyên sửa khóa vali, cặp số an toàn, hiệu quả, tiết kiệm. Liên hệ ngay: 0919.188.881.',                                                                      'link' => '#', 'icon' => '' ),
+		array( 'title' => 'Sửa Khóa Điện Tử, Khóa Vân Tay',        'desc' => 'Nhận sửa chữa, lắp đặt khóa điện tử, khóa vân tay trên địa bàn Hà Nội, Hồ Chí Minh. Phục vụ tận nơi, 24/7.',                                                              'link' => '#', 'icon' => '' ),
 	);
 }
 
@@ -108,16 +109,34 @@ function thokhoa247_default_why_choose_us() {
 function thokhoa247_default_areas( $city = 'ha-noi' ) {
 	if ( 'sai-gon' === $city ) {
 		return array(
-			'Quận 1', 'Quận 3', 'Quận 4', 'Quận 5',
-			'Quận 7', 'Quận 8', 'Quận 10', 'Quận 11',
-			'Quận 12', 'Tân Bình', 'Bình Thạnh', 'Bình Tân',
+			array( 'name' => 'Quận 1',   'caption' => 'Sửa Khóa Quận 1' ),
+			array( 'name' => 'Quận 3',   'caption' => 'Sửa Khóa Quận 3' ),
+			array( 'name' => 'Quận 4',   'caption' => 'Sửa Khóa Quận 4' ),
+			array( 'name' => 'Quận 5',   'caption' => 'Sửa Khóa Quận 5' ),
+			array( 'name' => 'Quận 6',   'caption' => 'Sửa Khóa Quận 6' ),
+			array( 'name' => 'Quận 7',   'caption' => 'Sửa Khóa Quận 7' ),
+			array( 'name' => 'Quận 8',   'caption' => 'Sửa Khóa Quận 8' ),
+			array( 'name' => 'Quận 10',  'caption' => 'Sửa Khóa Quận 10' ),
+			array( 'name' => 'Quận 11',  'caption' => 'Sửa Khóa Quận 11' ),
+			array( 'name' => 'Quận 12',  'caption' => 'Sửa Khóa Quận 12' ),
+			array( 'name' => 'Tân Bình', 'caption' => 'Sửa Khóa Quận Tân Bình' ),
+			array( 'name' => 'Bình Tân', 'caption' => 'Sửa Khóa Quận Bình Tân' ),
 		);
 	}
 
 	return array(
-		'Hoàn Kiếm', 'Đống Đa', 'Ba Đình', 'Cầu Giấy',
-		'Thanh Xuân', 'Hai Bà Trưng', 'Hà Đông', 'Nam Từ Liêm',
-		'Long Biên', 'Hoàng Mai', 'Tây Hồ', 'Gia Lâm',
+		array( 'name' => 'Hoàn Kiếm',   'caption' => 'Sửa Khóa Quận Hoàn Kiếm' ),
+		array( 'name' => 'Đống Đa',     'caption' => 'Sửa Khóa Quận Đống Đa' ),
+		array( 'name' => 'Ba Đình',     'caption' => 'Sửa Khóa Quận Ba Đình' ),
+		array( 'name' => 'Cầu Giấy',    'caption' => 'Sửa Khóa Quận Cầu Giấy' ),
+		array( 'name' => 'Thanh Xuân',  'caption' => 'Sửa Khóa Quận Thanh Xuân' ),
+		array( 'name' => 'Hai Bà Trưng','caption' => 'Sửa Khóa Quận Hai Bà Trưng' ),
+		array( 'name' => 'Tây Hồ',      'caption' => 'Sửa Khóa Quận Tây Hồ' ),
+		array( 'name' => 'Hà Đông',     'caption' => 'Sửa Khóa Quận Hà Đông' ),
+		array( 'name' => 'Long Biên',   'caption' => 'Sửa Khóa Quận Long Biên' ),
+		array( 'name' => 'Hoàng Mai',   'caption' => 'Sửa Khóa Quận Hoàng Mai' ),
+		array( 'name' => 'Từ Liêm',     'caption' => 'Sửa Khóa Huyện Từ Liêm' ),
+		array( 'name' => 'Gia Lâm',     'caption' => 'Sửa Khóa Huyện Gia Lâm' ),
 	);
 }
 

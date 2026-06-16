@@ -62,8 +62,10 @@ if ( $parent_term ) {
 }
 
 if ( empty( $districts ) ) {
-	foreach ( thokhoa247_default_areas( $city ) as $name ) {
-		// Tìm bài viết theo tiêu đề chứa tên quận
+	foreach ( thokhoa247_default_areas( $city ) as $item ) {
+		$name    = is_array( $item ) ? $item['name'] : $item;
+		$caption = is_array( $item ) ? $item['caption'] : sprintf( 'Sửa Khóa Quận %s', $name );
+
 		$posts = get_posts(
 			array(
 				'posts_per_page' => 1,
@@ -76,9 +78,10 @@ if ( empty( $districts ) ) {
 			: '';
 
 		$districts[] = array(
-			'title' => $name,
-			'link'  => $link,
-			'image' => $image,
+			'title'   => $name,
+			'caption' => $caption,
+			'link'    => $link,
+			'image'   => $image,
 		);
 	}
 }
@@ -98,7 +101,7 @@ if ( empty( $districts ) ) {
 						<?php endif; ?>
 						<span class="area-card__name"><?php echo esc_html( $district['title'] ); ?></span>
 					</div>
-					<p class="area-card__caption"><?php echo esc_html( sprintf( /* translators: %s: tên quận/khu vực */ __( 'Sửa khóa Quận %s', 'thokhoa247' ), $district['title'] ) ); ?></p>
+					<p class="area-card__caption"><?php echo esc_html( $district['caption'] ?? sprintf( 'Sửa Khóa Quận %s', $district['title'] ) ); ?></p>
 				</<?php echo esc_html( $tag ); ?>>
 			<?php endforeach; ?>
 		</div>

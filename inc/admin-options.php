@@ -212,7 +212,7 @@ function thokhoa247_render_options_page() {
 			$saved_services = get_option( 'thokhoa247_services_grid', array() );
 			$default_svcs   = thokhoa247_default_services_grid();
 			$svc_rows = array();
-			for ( $si = 0; $si < 8; $si++ ) {
+			for ( $si = 0; $si < 9; $si++ ) {
 				$svc_rows[] = array(
 					'title' => $saved_services[ $si ]['title'] ?? ( $default_svcs[ $si ]['title'] ?? '' ),
 					'desc'  => $saved_services[ $si ]['desc']  ?? ( $default_svcs[ $si ]['desc']  ?? '' ),
