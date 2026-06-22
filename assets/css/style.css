@@ -1188,15 +1188,15 @@ a.area-card:hover .area-card__name {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 52px;
-	height: 52px;
+	width: 64px;
+	height: 64px;
 	border-radius: 50%;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-	animation: floating-contact-bounce 1.6s ease-in-out infinite;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+	animation: floating-contact-bounce 1.4s ease-in-out infinite;
 }
 
 .floating-contact__btn--zalo {
-	background: #0068ff;
+	background: transparent;
 }
 
 .floating-contact__btn--call {
@@ -1204,8 +1204,13 @@ a.area-card:hover .area-card__name {
 }
 
 .floating-contact__btn svg {
-	width: 26px;
-	height: 26px;
+	width: 64px;
+	height: 64px;
+}
+
+.floating-contact__btn--call svg {
+	width: 34px;
+	height: 34px;
 	fill: #fff;
 }
 

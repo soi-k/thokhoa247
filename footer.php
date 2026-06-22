@@ -101,7 +101,12 @@ $stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
 	<div class="floating-contact">
 		<?php if ( ! empty( $contact['zalo'] ) ) : ?>
 			<a class="floating-contact__btn floating-contact__btn--zalo" href="https://zalo.me/<?php echo esc_attr( preg_replace( '/[^0-9]/', '', $contact['zalo'] ) ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e( 'Chat Zalo', 'thokhoa247' ); ?>">
-				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 5.8 2 10.5c0 2.6 1.4 4.9 3.6 6.5-.2.9-.6 2.1-.8 2.8-.1.3.2.6.5.5 1-.3 2.5-.9 3.4-1.4 1 .3 2.1.4 3.3.4 5.5 0 10-3.8 10-8.8S17.5 2 12 2z"/></svg>
+				<svg viewBox="0 0 48 48" aria-hidden="true">
+					<rect x="2" y="2" width="44" height="44" rx="10" fill="#0068ff"/>
+					<path fill="#fff" d="M24 10c-7.7 0-14 5.3-14 11.8 0 3.7 2 7 5.2 9.2-.3 1.2-.9 3-1.2 4-.1.4.3.8.7.6 1.5-.6 3.6-1.6 4.8-2.2 1.4.4 2.9.6 4.5.6 7.7 0 14-5.3 14-11.8S31.7 10 24 10z"/>
+					<path fill="#0068ff" d="M19 18.5h7.4c.6 0 .9.7.5 1.1l-5.6 6.4h5.1c.5 0 .9.4.9.9s-.4.9-.9.9H18.6c-.6 0-.9-.7-.5-1.1l5.6-6.4H19c-.5 0-.9-.4-.9-.9s.4-.9.9-.9z"/>
+					<path fill="#fc5050" d="M38 12 l8 0 l0 8 Z"/>
+				</svg>
 			</a>
 		<?php endif; ?>
 		<a class="floating-contact__btn floating-contact__btn--call" href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline'] ) ); ?>" aria-label="<?php esc_attr_e( 'Gọi ngay', 'thokhoa247' ); ?>">
