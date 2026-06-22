@@ -84,9 +84,6 @@ $contact = thokhoa247_default_contact();
 				<button type="button" class="main-nav__icon main-nav__search-toggle" aria-label="<?php esc_attr_e( 'Tìm kiếm', 'thokhoa247' ); ?>" data-search-toggle>
 					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 1 0 4.9 14.32l5.39 5.39 1.41-1.42-5.39-5.38A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
 				</button>
-				<a class="main-nav__icon" href="<?php echo esc_url( admin_url() ); ?>" aria-label="<?php esc_attr_e( 'Tài khoản', 'thokhoa247' ); ?>">
-					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg>
-				</a>
 			</div>
 			<form class="main-nav__search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" data-search-form>
 				<input type="search" name="s" placeholder="<?php esc_attr_e( 'Tìm kiếm...', 'thokhoa247' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>">
