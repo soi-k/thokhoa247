@@ -1201,7 +1201,6 @@ a.area-card:hover .area-card__name {
 
 .floating-contact__btn--call {
 	background: var(--color-primary);
-	animation-delay: 0.3s;
 }
 
 .floating-contact__btn svg {
