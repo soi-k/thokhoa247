@@ -1192,15 +1192,16 @@ a.area-card:hover .area-card__name {
 	height: 95px;
 	border-radius: 50%;
 	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-	animation: floating-contact-bounce 1.2s ease-in-out infinite;
 }
 
 .floating-contact__btn--zalo {
 	background: transparent;
+	animation: floating-contact-bounce 1.2s ease-in-out infinite;
 }
 
 .floating-contact__btn--call {
 	background: var(--color-primary);
+	animation: floating-contact-shake 1.2s ease-in-out infinite;
 }
 
 .floating-contact__btn svg {
@@ -1216,19 +1217,52 @@ a.area-card:hover .area-card__name {
 
 @keyframes floating-contact-bounce {
 	0%, 50% {
-		transform: translateY(0);
+		transform: translateY(0) scale(1);
 	}
-	15% {
-		transform: translateY(-22px);
+	12% {
+		transform: translateY(-32px) scale(1.05);
 	}
-	30% {
-		transform: translateY(0);
+	24% {
+		transform: translateY(0) scale(0.94);
 	}
-	38% {
-		transform: translateY(-10px);
+	32% {
+		transform: translateY(-14px) scale(1.02);
+	}
+	40% {
+		transform: translateY(0) scale(0.97);
 	}
 	46% {
-		transform: translateY(0);
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes floating-contact-shake {
+	0%, 45%, 100% {
+		transform: rotate(0deg) scale(1);
+	}
+	5% {
+		transform: rotate(-18deg) scale(1.08);
+	}
+	10% {
+		transform: rotate(16deg) scale(1.08);
+	}
+	15% {
+		transform: rotate(-14deg) scale(1.06);
+	}
+	20% {
+		transform: rotate(12deg) scale(1.06);
+	}
+	25% {
+		transform: rotate(-8deg) scale(1.03);
+	}
+	30% {
+		transform: rotate(8deg) scale(1.03);
+	}
+	35% {
+		transform: rotate(-4deg);
+	}
+	40% {
+		transform: rotate(0deg);
 	}
 }
 
