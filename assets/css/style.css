@@ -1026,6 +1026,32 @@ a.area-card:hover .area-card__name {
 }
 
 /* ---- Hotline strip & footer ---- */
+.hotline-strip {
+	background: var(--color-primary);
+	color: #fff;
+	margin-top: 48px;
+}
+
+.hotline-strip__inner {
+	display: flex;
+	justify-content: space-around;
+	padding: 16px 0;
+	flex-wrap: wrap;
+	gap: 16px;
+	text-align: center;
+}
+
+.hotline-strip__label {
+	display: block;
+	font-size: 13px;
+	opacity: 0.85;
+}
+
+.hotline-strip__item a {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 .site-footer {
 	background: #1f1f1f;
 	color: #ccc;

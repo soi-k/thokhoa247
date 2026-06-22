@@ -11,6 +11,23 @@ $contact     = thokhoa247_get_contact();
 $stores_hn   = thokhoa247_default_stores( 'ha-noi' );
 $stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
 ?>
+	<div class="hotline-strip">
+		<div class="container hotline-strip__inner">
+			<div class="hotline-strip__item">
+				<span class="hotline-strip__label"><?php esc_html_e( 'Hotline', 'thokhoa247' ); ?></span>
+				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline'] ) ); ?>"><?php echo esc_html( $contact['hotline'] ); ?></a>
+			</div>
+			<div class="hotline-strip__item">
+				<span class="hotline-strip__label"><?php esc_html_e( 'Tư vấn miền Nam', 'thokhoa247' ); ?></span>
+				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline_mien_nam'] ) ); ?>"><?php echo esc_html( $contact['hotline_mien_nam'] ); ?></a>
+			</div>
+			<div class="hotline-strip__item">
+				<span class="hotline-strip__label"><?php esc_html_e( 'Tư vấn miền Bắc', 'thokhoa247' ); ?></span>
+				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline_mien_bac'] ) ); ?>"><?php echo esc_html( $contact['hotline_mien_bac'] ); ?></a>
+			</div>
+		</div>
+	</div>
+
 	<footer class="site-footer">
 		<div class="container site-footer__grid">
 			<div class="footer-col">
