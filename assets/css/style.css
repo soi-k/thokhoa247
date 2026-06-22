@@ -1026,32 +1026,6 @@ a.area-card:hover .area-card__name {
 }
 
 /* ---- Hotline strip & footer ---- */
-.hotline-strip {
-	background: var(--color-primary);
-	color: #fff;
-	margin-top: 48px;
-}
-
-.hotline-strip__inner {
-	display: flex;
-	justify-content: space-around;
-	padding: 16px 0;
-	flex-wrap: wrap;
-	gap: 16px;
-	text-align: center;
-}
-
-.hotline-strip__label {
-	display: block;
-	font-size: 13px;
-	opacity: 0.85;
-}
-
-.hotline-strip__item a {
-	font-size: 20px;
-	font-weight: bold;
-}
-
 .site-footer {
 	background: #1f1f1f;
 	color: #ccc;
@@ -1174,27 +1148,49 @@ a.area-card:hover .area-card__name {
 }
 
 /* ---- Zalo floating button ---- */
-.zalo-float {
+.floating-contact {
 	position: fixed;
 	bottom: 24px;
 	left: 24px;
 	z-index: 999;
 	display: flex;
-	align-items: center;
-	gap: 8px;
-	background: #0068ff;
-	color: #fff;
-	padding: 10px 16px;
-	border-radius: 999px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	font-weight: bold;
-	font-size: 14px;
+	flex-direction: column;
+	gap: 12px;
 }
 
-.zalo-float svg {
-	width: 20px;
-	height: 20px;
+.floating-contact__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+	animation: floating-contact-bounce 1.6s ease-in-out infinite;
+}
+
+.floating-contact__btn--zalo {
+	background: #0068ff;
+}
+
+.floating-contact__btn--call {
+	background: var(--color-primary);
+	animation-delay: 0.3s;
+}
+
+.floating-contact__btn svg {
+	width: 26px;
+	height: 26px;
 	fill: #fff;
+}
+
+@keyframes floating-contact-bounce {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
 }
 
 /* ---- Products: brand grouping & related ---- */

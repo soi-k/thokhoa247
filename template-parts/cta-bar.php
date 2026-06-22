@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$contact = thokhoa247_default_contact();
+$contact = thokhoa247_get_contact();
 ?>
 <section class="cta-bar">
 	<div class="container cta-bar__inner">

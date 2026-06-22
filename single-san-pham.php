@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$contact = thokhoa247_default_contact();
+$contact = thokhoa247_get_contact();
 
 while ( have_posts() ) :
 	the_post();

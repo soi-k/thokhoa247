@@ -287,3 +287,21 @@ function thokhoa247_get_field( $field, $post_id = false, $default = '' ) {
 
 	return $default;
 }
+
+/**
+ * Thông tin liên hệ hợp nhất: đọc từ trang Tùy chỉnh trang chủ (1 nơi duy nhất),
+ * fallback về nội dung mặc định nếu admin chưa nhập.
+ */
+function thokhoa247_get_contact() {
+	$default = thokhoa247_default_contact();
+
+	$fields = array( 'hotline', 'hotline_mien_nam', 'hotline_mien_bac', 'working_hours', 'zalo' );
+
+	$contact = array();
+	foreach ( $fields as $field ) {
+		$option_key         = 'zalo' === $field ? 'zalo_so' : $field;
+		$contact[ $field ] = thokhoa247_get_field( $option_key, 'option', $default[ $field ] );
+	}
+
+	return $contact;
+}

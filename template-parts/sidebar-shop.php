@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$contact    = thokhoa247_default_contact();
+$contact    = thokhoa247_get_contact();
 $stores_hn  = thokhoa247_default_stores( 'ha-noi' );
 $stores_hcm = thokhoa247_default_stores( 'ho-chi-minh' );
 ?>

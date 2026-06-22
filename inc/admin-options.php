@@ -43,7 +43,7 @@ function thokhoa247_save_options() {
 	}
 
 	$text_fields = array(
-		'hotline', 'hotline_mien_nam', 'working_hours', 'zalo_so',
+		'hotline', 'hotline_mien_nam', 'hotline_mien_bac', 'working_hours', 'zalo_so',
 		'services_grid_bg', 'about_image',
 	);
 	foreach ( $text_fields as $field ) {
@@ -108,6 +108,7 @@ function thokhoa247_render_options_page() {
 
 	$hotline        = get_option( 'thokhoa247_hotline', '' );
 	$hotline_nam    = get_option( 'thokhoa247_hotline_mien_nam', '' );
+	$hotline_bac    = get_option( 'thokhoa247_hotline_mien_bac', '' );
 	$working_hours  = get_option( 'thokhoa247_working_hours', '' );
 	$zalo_so        = get_option( 'thokhoa247_zalo_so', '' );
 	$about_image    = get_option( 'thokhoa247_about_image', '' );
@@ -142,6 +143,10 @@ function thokhoa247_render_options_page() {
 				<tr>
 					<th>Hotline Sài Gòn</th>
 					<td><input type="text" name="hotline_mien_nam" value="<?php echo esc_attr( $hotline_nam ); ?>" class="regular-text" placeholder="0981.51.50.50"></td>
+				</tr>
+				<tr>
+					<th>Hotline miền Bắc</th>
+					<td><input type="text" name="hotline_mien_bac" value="<?php echo esc_attr( $hotline_bac ); ?>" class="regular-text" placeholder="0919.188.881"></td>
 				</tr>
 				<tr>
 					<th>Giờ làm việc</th>
