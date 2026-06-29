@@ -207,7 +207,7 @@ function thokhoa247_insert_mid_content_cta( $content ) {
 		return $content;
 	}
 
-	$contact = thokhoa247_default_contact();
+	$contact = thokhoa247_get_contact();
 	$cta     = '<div class="article-cta"><p>' . esc_html__( 'Bạn cần thợ khóa hỗ trợ ngay?', 'thokhoa247' ) . '</p><a class="btn btn--call" href="tel:' . esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline'] ) ) . '">' . esc_html__( 'GỌI NGAY', 'thokhoa247' ) . ' - ' . esc_html( $contact['hotline'] ) . '</a></div>';
 
 	$paragraphs = explode( '</p>', $content );
