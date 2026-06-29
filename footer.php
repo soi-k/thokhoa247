@@ -7,9 +7,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$contact     = thokhoa247_get_contact();
-$stores_hn   = thokhoa247_default_stores( 'ha-noi' );
-$stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
+$contact      = thokhoa247_get_contact();
+$footer_text  = thokhoa247_default_footer_text();
+$gioi_thieu   = get_option( 'thokhoa247_footer_gioi_thieu', '' );
+$phuong_cham  = get_option( 'thokhoa247_footer_phuong_cham', '' );
+$search_text  = get_option( 'thokhoa247_footer_search_text', '' );
+$stores_hn    = get_option( 'thokhoa247_footer_stores_ha_noi', array() );
+$stores_hcm   = get_option( 'thokhoa247_footer_stores_ho_chi_minh', array() );
+
+if ( '' === $gioi_thieu ) {
+	$gioi_thieu = $footer_text['gioi_thieu'];
+}
+if ( '' === $phuong_cham ) {
+	$phuong_cham = $footer_text['phuong_cham'];
+}
+if ( '' === $search_text ) {
+	$search_text = $footer_text['search_text'];
+}
+if ( empty( $stores_hn ) ) {
+	$stores_hn = thokhoa247_default_stores( 'ha-noi' );
+}
+if ( empty( $stores_hcm ) ) {
+	$stores_hcm = thokhoa247_default_stores( 'ho-chi-minh' );
+}
 ?>
 	<div class="hotline-strip">
 		<div class="container hotline-strip__inner">
@@ -32,11 +52,9 @@ $stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
 		<div class="container site-footer__grid">
 			<div class="footer-col">
 				<h3><?php esc_html_e( 'Giới thiệu', 'thokhoa247' ); ?></h3>
-				<p>
-					<?php esc_html_e( 'THỢ KHÓA 247 là một trong những đơn vị sửa khóa uy tín hàng đầu, trang thiết bị hiện đại, đội ngũ thợ khóa tay nghề cao, tự tin xử lý được tất cả các vấn đề về khóa.', 'thokhoa247' ); ?>
-				</p>
+				<p><?php echo esc_html( $gioi_thieu ); ?></p>
 				<h3><?php esc_html_e( 'Phương châm hoạt động', 'thokhoa247' ); ?></h3>
-				<p><?php esc_html_e( 'Nhanh - Chất lượng - Giá tốt là 3 yếu tố chúng tôi hướng tới trong dịch vụ sửa khóa của mình.', 'thokhoa247' ); ?></p>
+				<p><?php echo esc_html( $phuong_cham ); ?></p>
 			</div>
 
 			<div class="footer-col">
@@ -71,14 +89,7 @@ $stores_hcm  = thokhoa247_default_stores( 'ho-chi-minh' );
 
 		<div class="container footer-search">
 			<h4><?php esc_html_e( 'Mọi người cùng tìm kiếm', 'thokhoa247' ); ?></h4>
-			<p>
-				<?php
-				esc_html_e(
-					'Sửa khóa Hà Nội | Làm chìa khóa ô tô | Mở khóa xe hơi | Thay pin chìa khóa ô tô | Thay vỏ chìa khóa ô tô | Sửa khóa két sắt | Làm thẻ từ thang máy | Sửa khóa xe máy | Làm chìa khóa cửa cuốn | Sửa khóa tại nhà | Dịch vụ sửa cửa cuốn | Mở khóa ô tô | Lắp khóa cổng phụ ô tô | Làm chìa khóa vespa | Làm chìa khóa smartkey',
-					'thokhoa247'
-				);
-				?>
-			</p>
+			<p><?php echo esc_html( $search_text ); ?></p>
 		</div>
 
 		<div class="container footer-bottom">

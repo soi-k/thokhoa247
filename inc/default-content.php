@@ -159,6 +159,17 @@ function thokhoa247_default_testimonials() {
 }
 
 /**
+ * Nội dung tĩnh footer mặc định (giới thiệu, phương châm, "mọi người cùng tìm kiếm")
+ */
+function thokhoa247_default_footer_text() {
+	return array(
+		'gioi_thieu'  => 'THỢ KHÓA 247 là một trong những đơn vị sửa khóa uy tín hàng đầu, trang thiết bị hiện đại, đội ngũ thợ khóa tay nghề cao, tự tin xử lý được tất cả các vấn đề về khóa.',
+		'phuong_cham' => 'Nhanh - Chất lượng - Giá tốt là 3 yếu tố chúng tôi hướng tới trong dịch vụ sửa khóa của mình.',
+		'search_text' => 'Sửa khóa Hà Nội | Làm chìa khóa ô tô | Mở khóa xe hơi | Thay pin chìa khóa ô tô | Thay vỏ chìa khóa ô tô | Sửa khóa két sắt | Làm thẻ từ thang máy | Sửa khóa xe máy | Làm chìa khóa cửa cuốn | Sửa khóa tại nhà | Dịch vụ sửa cửa cuốn | Mở khóa ô tô | Lắp khóa cổng phụ ô tô | Làm chìa khóa vespa | Làm chìa khóa smartkey',
+	);
+}
+
+/**
  * Hệ thống cửa hàng (footer)
  */
 function thokhoa247_default_stores( $city = 'ha-noi' ) {

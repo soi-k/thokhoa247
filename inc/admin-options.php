@@ -44,7 +44,7 @@ function thokhoa247_save_options() {
 
 	$text_fields = array(
 		'hotline', 'hotline_mien_nam', 'hotline_mien_bac', 'working_hours', 'zalo_so',
-		'services_grid_bg', 'about_image',
+		'services_grid_bg', 'about_image', 'footer_phuong_cham', 'footer_search_text',
 	);
 	foreach ( $text_fields as $field ) {
 		if ( isset( $_POST[ $field ] ) ) {
@@ -55,6 +55,21 @@ function thokhoa247_save_options() {
 	// Lưu about_content với wp_kses_post
 	if ( isset( $_POST['about_content'] ) ) {
 		update_option( 'thokhoa247_about_content', wp_kses_post( wp_unslash( $_POST['about_content'] ) ) );
+	}
+
+	// Lưu giới thiệu footer (textarea nhiều dòng)
+	if ( isset( $_POST['footer_gioi_thieu'] ) ) {
+		update_option( 'thokhoa247_footer_gioi_thieu', sanitize_textarea_field( wp_unslash( $_POST['footer_gioi_thieu'] ) ) );
+	}
+
+	// Lưu danh sách cửa hàng Hà Nội / Hồ Chí Minh (mỗi dòng 1 cửa hàng)
+	if ( isset( $_POST['footer_stores_ha_noi'] ) ) {
+		$lines = array_filter( array_map( 'trim', explode( "\n", sanitize_textarea_field( wp_unslash( $_POST['footer_stores_ha_noi'] ) ) ) ) );
+		update_option( 'thokhoa247_footer_stores_ha_noi', array_values( $lines ) );
+	}
+	if ( isset( $_POST['footer_stores_ho_chi_minh'] ) ) {
+		$lines = array_filter( array_map( 'trim', explode( "\n", sanitize_textarea_field( wp_unslash( $_POST['footer_stores_ho_chi_minh'] ) ) ) ) );
+		update_option( 'thokhoa247_footer_stores_ho_chi_minh', array_values( $lines ) );
 	}
 
 	// Gallery ảnh cửa hàng
@@ -115,6 +130,18 @@ function thokhoa247_render_options_page() {
 	$about_content  = get_option( 'thokhoa247_about_content', '' );
 	$services_bg    = get_option( 'thokhoa247_services_grid_bg', '' );
 	$slides         = get_option( 'thokhoa247_hero_slides', array() );
+
+	$footer_gioi_thieu  = get_option( 'thokhoa247_footer_gioi_thieu', '' );
+	$footer_phuong_cham = get_option( 'thokhoa247_footer_phuong_cham', '' );
+	$footer_search_text = get_option( 'thokhoa247_footer_search_text', '' );
+	$stores_hn          = get_option( 'thokhoa247_footer_stores_ha_noi', array() );
+	$stores_hcm         = get_option( 'thokhoa247_footer_stores_ho_chi_minh', array() );
+	if ( empty( $stores_hn ) ) {
+		$stores_hn = thokhoa247_default_stores( 'ha-noi' );
+	}
+	if ( empty( $stores_hcm ) ) {
+		$stores_hcm = thokhoa247_default_stores( 'ho-chi-minh' );
+	}
 
 	if ( empty( $slides ) ) {
 		$slides = array(
@@ -315,6 +342,37 @@ function thokhoa247_render_options_page() {
 				<tr>
 					<th>Nội dung giới thiệu</th>
 					<td><?php wp_editor( $about_content, 'about_content', array( 'textarea_rows' => 6 ) ); ?></td>
+				</tr>
+			</table>
+
+			<!-- FOOTER -->
+			<h2 style="margin-top:32px">🦶 Nội dung Footer</h2>
+			<table class="form-table">
+				<tr>
+					<th>Giới thiệu</th>
+					<td><textarea name="footer_gioi_thieu" rows="4" class="large-text" placeholder="Mô tả ngắn về công ty hiển thị ở cột Giới thiệu trong footer"><?php echo esc_textarea( $footer_gioi_thieu ); ?></textarea></td>
+				</tr>
+				<tr>
+					<th>Phương châm hoạt động</th>
+					<td><textarea name="footer_phuong_cham" rows="2" class="large-text"><?php echo esc_textarea( $footer_phuong_cham ); ?></textarea></td>
+				</tr>
+				<tr>
+					<th>Cửa hàng Hà Nội</th>
+					<td>
+						<textarea name="footer_stores_ha_noi" rows="6" class="large-text" placeholder="Mỗi dòng 1 cửa hàng, VD: CS1: 205 Giáp Nhất, Thanh Xuân, Hà Nội"><?php echo esc_textarea( implode( "\n", $stores_hn ) ); ?></textarea>
+						<p class="description">Mỗi dòng là một cửa hàng.</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Cửa hàng Hồ Chí Minh</th>
+					<td>
+						<textarea name="footer_stores_ho_chi_minh" rows="6" class="large-text" placeholder="Mỗi dòng 1 cửa hàng"><?php echo esc_textarea( implode( "\n", $stores_hcm ) ); ?></textarea>
+						<p class="description">Mỗi dòng là một cửa hàng.</p>
+					</td>
+				</tr>
+				<tr>
+					<th>"Mọi người cùng tìm kiếm"</th>
+					<td><textarea name="footer_search_text" rows="3" class="large-text"><?php echo esc_textarea( $footer_search_text ); ?></textarea></td>
 				</tr>
 			</table>
 
