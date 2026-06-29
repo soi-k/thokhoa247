@@ -17,7 +17,6 @@ get_header();
 	<?php get_template_part( 'template-parts/services-grid' ); ?>
 	<?php get_template_part( 'template-parts/about' ); ?>
 	<?php get_template_part( 'template-parts/areas', null, array( 'city' => 'ha-noi', 'title' => __( 'Sửa khóa tại Hà Nội', 'thokhoa247' ) ) ); ?>
-	<?php get_template_part( 'template-parts/areas', null, array( 'city' => 'sai-gon', 'title' => __( 'Sửa khóa tại Sài Gòn', 'thokhoa247' ) ) ); ?>
 	<?php get_template_part( 'template-parts/products-featured' ); ?>
 	<?php get_template_part( 'template-parts/blog-news' ); ?>
 	<?php get_template_part( 'template-parts/testimonials' ); ?>
