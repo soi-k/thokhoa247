@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'THOKHOA247_VERSION', '1.0.2' );
+define( 'THOKHOA247_VERSION', '1.0.3' );
 
 /**
  * Theme setup
