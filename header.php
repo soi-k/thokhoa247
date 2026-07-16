@@ -47,14 +47,13 @@ $contact = thokhoa247_get_contact();
 				<?php else : ?>
 					<span class="site-logo__text"><?php bloginfo( 'name' ); ?></span>
 				<?php endif; ?>
-				<span class="site-logo__meta">
-					<span class="site-logo__tagline"><?php echo esc_html( get_bloginfo( 'description' ) ?: __( 'Dịch vụ sửa khóa chuyên nghiệp', 'thokhoa247' ) ); ?></span>
-					<span class="site-logo__hotline">
-						<?php esc_html_e( 'Hotline:', 'thokhoa247' ); ?>
-						<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline'] ) ); ?>"><?php echo esc_html( $contact['hotline'] ); ?></a>
-					</span>
-				</span>
 			</a>
+			<div class="site-logo__meta">
+				<span class="site-logo__tagline"><?php echo esc_html( get_bloginfo( 'description' ) ?: __( 'Dịch vụ sửa khóa chuyên nghiệp', 'thokhoa247' ) ); ?></span>
+				<a class="site-logo__hotline" href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $contact['hotline'] ) ); ?>">
+					<strong><?php esc_html_e( 'Hotline:', 'thokhoa247' ); ?></strong> <?php echo esc_html( $contact['hotline'] ); ?>
+				</a>
+			</div>
 		</div>
 		<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Mở menu', 'thokhoa247' ); ?>" aria-expanded="false">
 			<span></span><span></span><span></span>
